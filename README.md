@@ -14,6 +14,10 @@ The system is composed of the following services-components:
 -    Apache Tomcat 10 server for managing microservices written in Java (mainly version 21)
 -    Apache HTTP Server providing a set of subpages for the end user
 
-Each application and microservice has its dedicated directory containing source code, description of abilities, functions, database schema and means of communication.# Empty
+Each application and microservice has its dedicated directory containing source code, description of abilities, functions, database schema and means of communication.
 
-Andromeda architecture diagram...
+
+
+Andromeda architecture diagram should be here..
+
+Rest is under construction...
