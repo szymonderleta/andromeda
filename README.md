@@ -19,12 +19,12 @@ Each application and microservice has its dedicated directory containing source 
 
 ### List of Applications with current status:
 
-| Application Name                              | Version | Database                                        | Status |
-|-----------------------------------------------|---------|-------------------------------------------------|--------|
-| [Andromeda Auth](https://github.com/example1) | 0.8     | [Andromeda Schema](https://github.com/example1) | Alpha  |
-| [Nebula Page](https://github.com/example1)    | 0.7     | [Nebula Schema](https://github.com/example1)    | Alpha  |
-| [Chess](https://github.com/example1)          | 0.5     | [Chess Schema](https://github.com/example1)     | WIP    |
-| [Element](https://github.com/example1)        | 0.0     | [Element Schema](https://github.com/example1)   | To-Do  |
+| Application Name                                                                      | Version | Database                                                                                    | Status |
+|---------------------------------------------------------------------------------------|---------|---------------------------------------------------------------------------------------------|--------|
+| [Andromeda Auth](https://github.com/szymonderleta/andromeda/tree/main/apps/andromeda) | 0.8     | [Andromeda Schema](https://github.com/szymonderleta/andromeda/tree/main/database/andromeda) | Alpha  |
+| [Nebula Page](https://github.com/szymonderleta/andromeda/tree/main/apps/nebula)       | 0.7     | [Nebula Schema](https://github.com/szymonderleta/andromeda/tree/main/database/nebula)       | Alpha  |
+| [Chess](https://github.com/szymonderleta/andromeda/tree/main/apps/chess)              | 0.5     | [Chess Schema](https://github.com/szymonderleta/andromeda/tree/main/database/chess)         | WIP    |
+| [Element](https://github.com/szymonderleta/andromeda/tree/main/apps/element)          | 0.0     | [Element Schema](https://github.com/szymonderleta/andromeda/tree/main/database/element)     | To-Do  |
 
 ## Licence
 Andromeda is an open-source project based on the Apache 2.0 license
