@@ -90,7 +90,7 @@ And change the port from `8080` to `8081`. Example:
    ```
 
 After performing the correct configuration, you can access the administration panel at the following address:  
-[https://milkyway.local:8081/manager/html](https://milkyway.local:8081/manager/html).
+[https://example.local:8081/manager/html](https://example.local:8081/manager/html).
 
 Note: Ensure that HTTPS is properly configured for secure access.
 
