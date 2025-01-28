@@ -2,7 +2,14 @@
 
 ## About
 
-The MariaDB database is used for storing and managing data.
+Andromeda uses MariaDB system for storing and managing data.
+
+MariaDB is an open-source relational database management system (RDBMS) based on MySQL. It is designed to be highly
+scalable, reliable, and secure while offering SQL compliance and ACID support. MariaDB is widely used for web
+applications and other data-driven systems due to its robust performance and active community support.
+
+## Installation
+
 To install it on Debian 12, use the following commands with administrator privileges:
 
 ```Bash
