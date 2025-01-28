@@ -66,3 +66,50 @@ Converting the certificate to JKS format for the Tomcat server:
 keytool -importkeystore -deststorepass changeit -destkeypass changeit -destkeystore /var/lib/tomcat10/conf/tomcat.jks \
 -srckeystore example.local.p12 -srcstoretype PKCS12 -srcstorepass changeit -alias example
 ```
+
+## Self-signed certificate example for Apache2 server
+
+Generate a self-signed certificate:
+
+```Bash
+sudo openssl req -x509 -nodes -days 3365 -newkey rsa:2048 -keyout /etc/ssl/private/andromeda-frontend-selfsigned.key -out /etc/ssl/certs/andromeda-frontend-selfsigned.crt
+```
+
+-x509: Specifies an X.509 certificate.
+• -days 365: The certificate will be valid for one year.
+• -keyout: Path to the private key.
+• -out: Path to the certificate file.
+
+Configure Apache to use the certificate: In the VirtualHost file
+/etc/apache2/sites-enabled/000-default.conf
+
+add following lines
+
+```XML
+<VirtualHost *:443>
+    ServerName example.local
+
+    DocumentRoot /var/www/html
+
+    SSLEngine on
+    SSLCertificateFile /etc/ssl/certs/andromeda-frontend-selfsigned.crt
+    SSLCertificateKeyFile /etc/ssl/private/andromeda-frontend-selfsigned.key
+
+    <Directory "/var/www/html">
+        Options Indexes FollowSymLinks
+        AllowOverride All
+        Require all granted
+
+        RewriteEngine on
+
+        # Redirect only root "/" requests to "/nebula/app"
+        RewriteCond %{REQUEST_URI} ^/$
+        RewriteRule ^ /nebula/app [R=301,L]
+    </Directory>
+</VirtualHost>
+```
+Then restart service:
+
+```Bash
+sudo systemctl restart apache2
+```

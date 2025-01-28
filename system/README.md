@@ -20,7 +20,7 @@ Under build, image that represents used services and major apps.
 ## Main Services
 - **MariaDB 11**: Relational database management system.
 - **Apache Tomcat 10**: Application server running on JRE 21.
-- **Apache HTTP Server**: Handles front-end pages and static resources.
+- **Apache2 HTTP Server**: Handles front-end pages and static resources.
 
 ## FAQ
 
@@ -29,6 +29,7 @@ Under build, image that represents used services and major apps.
 - **[HTTPS.md](faq/HTTPS.md)**: Documentation about how configure https connections.
 - **[DATABASE.md](faq/DATABASE.md)**: Documentation about database system and basic configuration.
 - **[TOMCAT.md](faq/TOMCAT.md)**: Documentation about Apache Tomcat server and basic configuration.
+- **[SSH.md](faq/SSH.md)**: Documentation about connections via SSH.
 
 ## License
 This project is distributed under the Apache 2.0 license.
