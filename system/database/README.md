@@ -90,7 +90,6 @@ Example recommendation:
 GRANT SELECT, INSERT, UPDATE ON andromeda.* TO 'andromeda'@'192.168.1.100';
 GRANT SELECT, INSERT ON nebula.* TO 'nebula'@'192.168.1.101';
 -- Grant only necessary permissions for secure environments.
-FLUSH PRIVILEGES;
 ```
 
 ### 4. Apply changes
