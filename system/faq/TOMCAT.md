@@ -41,52 +41,67 @@ To install Apache Tomcat 10, run the following command:
 ```Bash
 sudo apt install tomcat10
 ```
+
 ## Configuration:
 
 For the proper operation of the Apache Tomcat server, configuration is required, including the creation of user accounts
 so that server applications can be deployed. To do this, edit the file `/etc/tomcat10/tomcat-users.xml` by adding the
-appropriate lines of code. 
+appropriate lines of code.
 
 **Update the `tomcat-users.xml` file:**
 
-   Run the following command to edit the file:
+Run the following command to edit the file:
+
    ```bash
    sudo nano /etc/tomcat10/tomcat-users.xml
    ```
-   Add the necessary user roles and credentials. Example:
+
+Add the necessary user roles and credentials. Example:
+
    ```xml
-   <role rolename="manager-gui"/>
-   <user username="admin" password="your_password" roles="manager-gui"/>
+
+<role rolename="manager-gui"/>
+<user username="admin" password="your_password" roles="manager-gui"/>
    ```
-   
-It may also be necessary to change the Java version by editing the file `/etc/default/tomcat10` and adding the `JAVA_HOME` variable.
+
+It may also be necessary to change the Java version by editing the file `/etc/default/tomcat10` and adding the
+`JAVA_HOME` variable.
 
 **Update Java version if required:**
 
-   Open the file `/etc/default/tomcat10`:
+Open the file `/etc/default/tomcat10`:
+
    ```bash
    sudo nano /etc/default/tomcat10
    ```
 
-   Add the `JAVA_HOME` variable pointing to your Java installation. Example:
+Add the `JAVA_HOME` variable pointing to your Java installation. Example:
+
 ```Bash
 JAVA_HOME="/opt/jdk-21.0.1"
 ```
 
- By default, the Apache Tomcat server is designed to work on port 8081. To
-configure this, you need to modify the file `/etc/tomcat10/server.xml`. 
+By default, the Apache Tomcat server is designed to work on port 8081. To
+configure this, you need to modify the file `/etc/tomcat10/server.xml`.
 
 Modify the file `/etc/tomcat10/server.xml`:
+
    ```bash
    sudo nano /etc/tomcat10/server.xml
    ```
+
 Locate the following line:
+
    ```xml
-   <Connector port="8080" protocol="HTTP/1.1"
+
+<Connector port="8080" protocol="HTTP/1.1"
    ```
+
 And change the port from `8080` to `8081`. Example:
+
    ```xml
-   <Connector port="8081" protocol="HTTP/1.1"
+
+<Connector port="8081" protocol="HTTP/1.1"
    ```
 
 After performing the correct configuration, you can access the administration panel at the following address:  
@@ -94,4 +109,93 @@ After performing the correct configuration, you can access the administration pa
 
 Note: Ensure that HTTPS is properly configured for secure access.
 
-To settings HTTPS see [how configure HTTPS.md](HTTPS.md) and [How configure self-signed certificate](CERTIFICATE.md) sections.
+To settings HTTPS see [how configure HTTPS.md](HTTPS.md) and [How configure self-signed certificate](CERTIFICATE.md)
+sections.
+
+## Logging
+
+### Tomcat setup
+
+To enable displaying logs from the application, it is necessary to edit the file /var/lib/tomcat10/conf/context.xml
+
+```Bash
+cd /var/lib/tomcat10/conf
+sudo nano context.xml
+```
+
+Detailed logs can be enabled by adding the parameter swallowOutput="true" to the Context component.
+
+```xml
+
+<Context swallowOutput="true">
+    <!-- body  -->
+</Context>
+```
+
+### Java aplication setup
+
+In the application itself, create a logging.properties file in the webapp/WEB-INF/classes directory and add appropriate
+configuration, example for the Andromeda Authorization Server application:
+
+```properties
+handlers = org.apache.juli.FileHandler, java.util.logging.ConsoleHandler
+
+############################################################
+# Handler specific properties.
+# Describes specific configuration info for Handlers.
+############################################################
+
+org.apache.juli.FileHandler.level = FINE
+org.apache.juli.FileHandler.directory = ${catalina.base}/logs
+org.apache.juli.FileHandler.prefix = ${classloader.webappName}.
+
+java.util.logging.ConsoleHandler.level = FINE
+java.util.logging.ConsoleHandler.formatter = java.util.logging.OneLineFormatter
+```
+
+## WAR size
+
+Changing the size of the transferred WAR file can be done by editing the file
+/usr/share/tomcat10-admin/manager/WEB-INF/web.xml
+
+### Example File Configuration
+
+Below is an example configuration file for editing `/usr/share/tomcat10-admin/manager/WEB-INF/web.xml` to increase the
+maximum allowed WAR file size:
+
+```xml
+
+<multipart-config>
+    <!-- Set the maximum allowed file size (e.g., 50MB) -->
+    <max-file-size>52428800</max-file-size>
+    <!-- Set the maximum size of the request, including file and form data -->
+    <max-request-size>52428800</max-request-size>
+    <!-- Threshold after which files will be written to disk -->
+    <file-size-threshold>0</file-size-threshold>
+</multipart-config>
+```
+
+This configuration ensures that the manager application accepts larger WAR files for deployment.
+
+## File writing in other paths
+
+To enable file saving, e.g., avatars via REST API, it is necessary to modify write permissions. To do this, edit the
+configuration file
+/etc/systemd/system/tomcat10.service.d/override.conf
+
+```bash
+sudo systemctl edit tomcat10.service
+```
+
+Commands to allow saving avatars by the `nebula-rest-api` program running on the Tomcat10 server:
+```Bash
+[Service]
+ReadWritePaths=/var/www/html/user/avatar/
+```
+
+Restarting daemon is required:
+
+```Bash
+sudo systemctl daemon-reload
+sudo systemctl restart tomcat10.service
+```
