@@ -2,8 +2,9 @@
 
 ## About
 
-Do przechowywania i przetwarzania danych wykorzystano bazę danych MariaDB. 
-Instalacja w systemie Debian 12 wykonana jest za pomocą poleceń wykonywanych z uprawnieniami administratorskimi:
+The MariaDB database is used for storing and processing data.
+Installation on Debian 12 is performed using administrator privileges with the following commands:
+
 ```Bash
 sudo apt update && sudo apt upgrade
 
@@ -11,5 +12,6 @@ sudo apt install mariadb-server
 
 sudo mysql_secure_installation
 ```
-Bardziej szczegółowy opis można odnaleźć chociażby pod linkiem: https://pimylifeup.com/raspberry-pi-mysql/.
+
+A more detailed description can be found at the following link: https://pimylifeup.com/raspberry-pi-mysql/.```
 
