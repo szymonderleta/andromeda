@@ -102,11 +102,32 @@ https://stackoverflow.com/questions/29150384/how-to-allow-cross-domain-request-i
 To settings HTTPS see [how configure HTTPS.md](HTTPS.md) and [How configure self-signed certificate](CERTIFICATE.md)
 sections.
 
-Apache wymaga zainstalowania modułu mod_ssl do obsługi HTTPS. Możesz to zrobić następująco:
+Apache requires the mod_ssl module to support HTTPS. You can do this as follows:
 
 ```Bash
 sudo a2enmod ssl
 sudo systemctl restart apache2
 ```
 
+#### Automatic redirection from HTTP to HTTPS  
+If you want to force all HTTP requests to be redirected to HTTPS, add a redirection in the VirtualHost file for HTTP (*:80):  
+VirtualHost file (/etc/apache2/sites-available/000-default.conf or another configuration file for HTTP):
 
+```xml
+<VirtualHost *:80>
+    ServerName example.local
+    Redirect / https://example.local
+</VirtualHost>
+```
+
+Enable the SSL module in Apache  
+The SSLEngine directive is part of the mod_ssl module. You can enable this module by following these steps:
+
+```Bash
+sudo a2enmod ssl
+```
+
+Then restart Apache:
+```Bash
+sudo systemctl restart apache2
+```
