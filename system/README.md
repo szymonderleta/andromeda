@@ -1,29 +1,29 @@
-# System Folder Project
-
-## Under Construction section - contains only example
+# System Information
 
 ## About the Project
-This system folder is part of the [Project Name or System Name]. It contains important resources and configurations related to the system's functionalities.
 
-## Folder Structure
-- **[File or Folder Name]**: Description of its contents or purpose.
-- **[Another File/Folder]**: Brief details about its contents or role.
+Andromeda system is a system built on the Raspberry Pi 5 platform. The system consists of databases and a collection of
+microservices working both as REST applications and web applications.
 
-## Requirements
-- [List tools or software required to work with this folder]
+## Raspberry Pi 
 
-## Installation
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-repo/project-name.git
-   ```
-2. Navigate to the system folder:
-   ```bash
-   cd path/to/system-folder
-   ```
+The Andromeda platform consists of a Raspberry Pi 5 computer, Debian 12 operating system, MariaDB database, Apache
+Tomcat server, and a set of applications described in subsequent chapters of the documentation.
 
-## Usage
-- Instructions or steps to work with the system folder and its files.
+The Raspberry Pi platform specification is available on the manufacturer's website
+at https://www.raspberrypi.com/documentation/computers/raspberry-pi-5.html. The Andromeda platform uses a Raspberry Pi
+version 5 equipped with 8GB of RAM and powered by a wall charger provided by the manufacturer.
+
+## Logical model
+Under build, image that represents used services and major apps.
+
+## Main Services
+- **MariaDB 11**: Relational database management system.
+- **Apache Tomcat 10**: Application server running on JRE 21.
+- **Apache HTTP Server**: Handles front-end pages and static resources.
+
+## FAQ
+- **[ENVIRONMENTS.md](ENVIRONMENTS.md)**: Documentation about system environments.
 
 ## License
-[License details, e.g., MIT, Apache 2.0, etc.]
+This project is distributed under the Apache 2.0 license.
