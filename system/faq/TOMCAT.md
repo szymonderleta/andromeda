@@ -94,4 +94,4 @@ After performing the correct configuration, you can access the administration pa
 
 Note: Ensure that HTTPS is properly configured for secure access.
 
-To settings HTTPS see [how configure HTTPS.md](../HTTPS.md) and [How configure self-signed certificat](../CERTIFICATE.md) sections.
+To settings HTTPS see [how configure HTTPS.md](HTTPS.md) and [How configure self-signed certificate](CERTIFICATE.md) sections.

@@ -23,7 +23,12 @@ Under build, image that represents used services and major apps.
 - **Apache HTTP Server**: Handles front-end pages and static resources.
 
 ## FAQ
-- **[ENVIRONMENTS.md](ENVIRONMENTS.md)**: Documentation about system environments.
+
+- **[ENVIRONMENTS.md](faq/ENVIRONMENTS.md)**: Documentation about system environments.
+- **[CERTIFICATE.md](faq/CERTIFICATE.md)**: Documentation about self-signed certificates used in Andromeda.
+- **[HTTPS.md](faq/HTTPS.md)**: Documentation about how configure https connections.
+- **[DATABASE.md](faq/DATABASE.md)**: Documentation about database system and basic configuration.
+- **[TOMCAT.md](faq/TOMCAT.md)**: Documentation about Apache Tomcat server and basic configuration.
 
 ## License
 This project is distributed under the Apache 2.0 license.
