@@ -35,4 +35,3 @@ Each application and microservice has its dedicated directory containing source 
 ## Licence
 Andromeda is an open-source project based on the Apache 2.0 license
 
-
