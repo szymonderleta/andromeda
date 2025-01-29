@@ -1,9 +1,9 @@
-Andromeda Authorization Server
+# Andromeda Authorization Server
 
 Author: Szymon Derleta
 Current Version: 2.0.1 Beta Release
 
-Overview
+## Overview
 
 Andromeda Authorization Server is a robust and versatile application built with Java SDK 21 and the advanced Spring Boot
 Framework 3.2. This server effectively manages access and authorization, prioritizing security with the use of JWT (JSON
@@ -23,7 +23,26 @@ Key Features
 
     5. Enterprise-Level Scalability: Leverages modern Java SDK 21 features and advanced Spring Boot capabilities to provide a highly scalable and maintainable solution for handling access control and user authentication in enterprise systems.
 
-Endpoints Examples:
+
+## Main features
+
+• determining access to a resource based on roles
+• generating JWT tokens,
+• registering new users,
+• generating and sending automatic email messages with new passwords or activation links.
+
+
+## Allowed applications
+
+Andromeda is based on REST API, communication that requires the header "X-Requesting-App" in endpoint request. 
+
+The list of allowed applications is defined as:
+
+```xml
+allowed.applications=nebula_rest_api,element_rest_api,chess_rest_api,robak_rest_api,racer_rest_api
+```
+
+## Endpoints Examples:
 
 1. **POST request to login with username and get cookie with jwtToken**
 

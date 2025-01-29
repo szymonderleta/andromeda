@@ -44,5 +44,4 @@ The API documentation is available at the following URLs:
 - Improve the password reset mechanism by implementing a verification link with expiration instead of directly sending a
   new password via email.
 
-
-
+  

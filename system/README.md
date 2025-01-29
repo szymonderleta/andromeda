@@ -30,6 +30,8 @@ Under build, image that represents used services and major apps.
 - **[DATABASE.md](faq/DATABASE.md)**: Documentation about database system and basic configuration.
 - **[TOMCAT.md](faq/TOMCAT.md)**: Documentation about Apache Tomcat server and basic configuration.
 - **[SSH.md](faq/SSH.md)**: Documentation about connections via SSH.
+- **[SOLUTIONS.md](faq/SOLUTIONS.md)**: Documentation about known problems and solutions.
+- **[BACKUP.md](faq/BACKUP.md)**: Documentation about backups and maintenance.
 
 ## License
 This project is distributed under the Apache 2.0 license.
