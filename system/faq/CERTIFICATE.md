@@ -113,3 +113,27 @@ Then restart service:
 ```Bash
 sudo systemctl restart apache2
 ```
+
+## Importuj certyfikat wystawiony dla localhost
+
+### **1. Export the `example.local` certificate from the server**
+
+If your backend is already configured to support HTTPS but uses a self-signed (untrusted) certificate, you first need to
+export it as a `.crt` or `.pem` file.
+For example, you can open `https://example.local:8555` in a browser and download the certificate:
+
+- Click the lock icon next to the address in the browser.
+- Select the **View Certificate** option or similar (depending on the browser).
+- Save the certificate as a `.crt` or `.pem` file.
+
+### **2. Add the certificate to the local trust store**
+
+- **macOS/Linux (OpenSSL or system trust store):** For OpenSSL, you can add the certificate to the local list of trusted
+  certificates:
+
+``` bash
+     sudo cp example-local.pem /usr/local/share/ca-certificates/example-local.crt
+     sudo update-ca-certificates
+```
+
+
