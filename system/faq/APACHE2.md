@@ -131,3 +131,64 @@ Then restart Apache:
 ```Bash
 sudo systemctl restart apache2
 ```
+
+### Routing 
+
+Create a .htaccess file in the main directory
+ex. for nebula front app
+
+```Bash
+sudo touch \var\www\html\nebula\app\.htaccess
+sudo nano \var\www\html\nebula\app\.htaccess
+```
+
+and add:
+
+```Bash
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /nebula/app/
+
+  # Check if the file or directory exists
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+
+  # Redirect all non-existing paths to React's index.html
+  RewriteRule ^ index.html [L]
+</IfModule>
+```
+
+edit the Apache2 server configuration file
+
+```Bash
+sudo nano /etc/apache2/sites-available/000-default.conf
+```
+
+```Bash
+<VirtualHost *:443>
+    ServerName milkyway.local
+
+    DocumentRoot /var/www/html
+
+    # SSL support
+    SSLEngine on
+    SSLCertificateFile /etc/ssl/certs/andromeda-frontend-selfsigned.crt
+    SSLCertificateKeyFile /etc/ssl/private/andromeda-frontend-selfsigned.key
+
+    # Use mod_rewrite for redirection
+    <Directory "/var/www/html">
+        Options Indexes FollowSymLinks
+        AllowOverride All
+        Require all granted
+    </Directory>
+
+    <Directory "/var/www/html/nebula/app">
+        RewriteEngine On
+        # Check if the file or directory exists
+        RewriteCond %{REQUEST_FILENAME} !-f
+        RewriteCond %{REQUEST_FILENAME} !-d
+        # Redirect all non-existing paths to React's index.html
+        RewriteRule ^ index.html [L]
+    </Directory>
+</VirtualHost>
+```
