@@ -192,3 +192,21 @@ sudo nano /etc/apache2/sites-available/000-default.conf
     </Directory>
 </VirtualHost>
 ```
+
+#### Enable `mod_rewrite` Module and Restart Apache
+
+To enable the `mod_rewrite` module for URL rewriting in Apache, execute the following commands:
+
+```Bash
+sudo a2enmod rewrite
+```
+
+Then restart the Apache server to apply the changes:
+
+```Bash
+sudo systemctl restart apache2
+```
+
+Once enabled, you can use `.htaccess` files or Apache configuration files to define rewrite rules.
+
+
