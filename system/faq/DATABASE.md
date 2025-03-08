@@ -123,3 +123,24 @@ Example recommendation:
 bind-address = 127.0.0.1
 # In a production environment, allow only local connections unless external access is required.
 ```
+
+
+### 5. Cloning databases
+
+1. **Dump the `andromeda` database to a file**: Run the following command in the terminal:
+
+``` bash
+   mysqldump -u root -p andromeda > andromeda.sql
+```
+
+1. **Import the dump into a new database `test_andromeda`**: First, create an empty database:
+
+``` sql
+   CREATE DATABASE test_andromeda;
+```
+
+Then import the data:
+
+``` bash
+   mysql -u root -p test_andromeda < andromeda.sql
+```
