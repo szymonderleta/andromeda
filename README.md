@@ -65,13 +65,13 @@ Legend:
 |---------------------------------------------------------------------------------------------------------------|------------|---------|-----------------|---------------------------------------------------------------------------------------------------------------------|
 | [Andromeda Auth](https://github.com/szymonderleta/andromeda/tree/main/apps/andromeda/andromeda-auth-server)   | Server App | 3.0.0   | 🟩 **Released** | Used for authorization, authentication, token distribution, mail sending, creation and updating of user credentials |
 | [Andromeda Cloud](https://github.com/szymonderleta/andromeda/tree/main/apps/andromeda/andromeda-cloud-server) | Server App | 1.1.4   | 🟩 **Released** | Used to distribute configuration to other apps                                                                      |
-| [Andromeda Database](https://github.com/szymonderleta/andromeda/tree/main/database/andromeda)                 | Schema     | 1.2.0   | 🟪 **Beta**     | Schema for production and testing                                                                                   |
+| [Andromeda Database](https://github.com/szymonderleta/andromeda/tree/main/database/andromeda)                 | Schema     | 1.0.0   | 🟪 **Beta**     | Schema for production and testing                                                                                   |
 
 
 ### Services Logic Layers
 
-![andromeda-logic.drawio-2025-04-05-dark.png](res/andromeda-logic.drawio-2025-01-29-dark.png)
-Last updated: 05.04.2025
+![andromeda-logic.drawio-2025-01-29-dark.png](res/andromeda-logic.drawio-2025-01-29-dark.png)
+Last updated: 29.01.2025
 
 
 
