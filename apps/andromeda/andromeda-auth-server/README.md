@@ -1,7 +1,8 @@
 # Andromeda Authorization Server
 
-Author: Szymon Derleta
-Current Version: 2.0.1 Beta Release
+Author: Szymon Derleta  
+Current Version: 3.0.0  
+Repository: [GitHub - Andromeda Authorization Server](https://github.com/szymonderleta/andromeda-authorization-server-public)
 
 ## Overview
 
@@ -23,96 +24,67 @@ Key Features
 
     5. Enterprise-Level Scalability: Leverages modern Java SDK 21 features and advanced Spring Boot capabilities to provide a highly scalable and maintainable solution for handling access control and user authentication in enterprise systems.
 
+## Building the Project
 
-## Main features
+To build the Andromeda Authorization Server project, follow the steps below:
 
-• determining access to a resource based on roles
-• generating JWT tokens,
-• registering new users,
-• generating and sending automatic email messages with new passwords or activation links.
+1. **Clone the Repository**  
+   Open a terminal and clone the repository using the following command:
+   ```bash
+   git clone https://github.com/szymonderleta/andromeda-authorization-server-public.git
+   ```
+   Navigate to the project directory:
+   ```bash
+   cd andromeda-authorization-server-public
+   ```
 
+2. **Prerequisites**  
+   Ensure you have the following installed on your system:
+   - **Java SDK 21**  
+     Download and install [Java SDK 21](https://jdk.java.net/21/) to support the project.
+   - **Maven**  
+     Install [Apache Maven](https://maven.apache.org/download.cgi) to manage project dependencies and builds.
+   - **MariaDB**  
+     Set up and run a MariaDB server that will be used for the database connection.
 
-## Allowed applications
+3. **Configure Application Properties**  
+   Edit the `application.properties` file in the `src/main/resources` directory to provide your database and email
+   configuration:
+   ```properties
+   spring.datasource.url=jdbc:mariadb://<your-database-host>:<port>/<database-name>
+   spring.datasource.username=<your-database-username>
+   spring.datasource.password=<your-database-password>
 
-Andromeda is based on REST API, communication that requires the header "X-Requesting-App" in endpoint request. 
+   # Google email configuration (for email services)
+   spring.mail.username=<your-email@gmail.com>
+   spring.mail.password=<your-email-password>
+   spring.mail.host=smtp.gmail.com
+   spring.mail.port=587
+   spring.mail.protocol=smtp
+   spring.mail.properties.mail.smtp.auth=true
+   spring.mail.properties.mail.smtp.starttls.enable=true
+   ```
 
-The list of allowed applications is defined as:
+   Replace the placeholders (e.g., `<your-database-host>`, `<your-email@gmail.com>`) with your actual configuration
+   values.
 
-```xml
-allowed.applications=nebula_rest_api,element_rest_api,chess_rest_api,robak_rest_api,racer_rest_api
-```
+4. **Build the Project**  
+   Use Maven to package the application. Run the following command in the terminal within the project directory:
+   ```bash
+   mvn clean package
+   ```
+   This will generate a JAR file in the `target` directory.
 
-## Endpoints Examples:
+5. **Run the Application**  
+   Start the application using the following command:
+   ```bash
+   java -jar target/andromeda-authorization-server-3.0.0.jar
+   ```
+   Ensure that your MariaDB server is running and reachable.
 
-1. **POST request to login with username and get cookie with jwtToken**
+6. **Access the Application**  
+   The server will start by default on `http://localhost:8080`. You can update the port or other settings in the
+   `application.properties` file if needed.
 
-   **Description:** Allows a user to log in using their username. The server responds with a JWT token set as a cookie.
-
-   **Endpoint:**  
-   `POST http://localhost:8087/api/v3/auth/login`
-
-   **Headers:**
-   - `Content-Type: application/json`
-   - `X-Requesting-App: nebula_rest_api`
-
-   **Request Body:**
-    ```json
-    {
-        "login": "user",
-        "password": "password"
-    }
-    ```
-
-2. **POST request to login with email and get cookie with jwtToken**
-
-   **Description:** Allows a user to log in using their email. The server responds with a JWT token set as a cookie.
-
-   **Endpoint:**  
-   `POST http://localhost:8087/api/v3/auth/login`
-
-   **Headers:**
-   - `Content-Type: application/json`
-   - `X-Requesting-App: nebula_rest_api`
-
-   **Request Body:**
-    ```json
-    {
-        "login": "user@local.com",
-        "password": "password"
-    }
-    ```
-
-3. **GET request for token page (using cookie authorization)**
-
-   **Description:** Fetches a paginated list of tokens. Authorization is handled via a JWT token included in the cookie.
-
-   **Endpoint:**  
-   `GET http://localhost:8087/api/v1/table/tokens?page=0&size=5`
-
-   **Headers:**
-   - `Content-Type: application/json`
-   - `X-Requesting-App: nebula_rest_api`
-   - `Cookie: jwtToken=<your_jwt_token>`
-
-   **Sample Cookie:**
-    ```
-    jwtToken=eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxMSx4YnNtdnV6ZmF5eXpqeGR4YWtAY2twdHIuY29tIiwiaXNzIjoiRGJDb25uZWN0aW9uQXBwIiwicm9sZXMiOlt7ImlkIjoxLCJuYW1lIjoiUk9MRV9VU0VSIn1dLCJpYXQiOjE3MzcxOTYxOTQsImV4cCI6MTczNzE5OTc5NH0.8cu9zV7EfnV3eo51O4t371JqZB4QMZDFdscp4PEEOjX_nbicVyei0rsRT4r9AuFOk_WGlyFodXYRqDMVYUC4OA
-    ```
-
-4. **GET request for roles by role name filter (using cookie authorization)**
-
-   **Description:** Retrieves roles filtered by role name. Authorization is handled via a JWT token included in the
-   cookie.
-
-   **Endpoint:**  
-   `GET http://localhost:8087/api/v1/table/roles?roleNameFilter=er`
-
-   **Headers:**
-   - `Content-Type: application/json`
-   - `X-Requesting-App: nebula_rest_api`
-   - `Cookie: jwtToken=<your_jwt_token>`
-
-   **Sample Cookie:**
-    ```
-    jwtToken=eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxMSx4YnNtdnV6ZmF5eXpqeGR4YWtAY2twdHIuY29tIiwiaXNzIjoiRGJDb25uZWN0aW9uQXBwIiwicm9sZXMiOlt7ImlkIjoxLCJuYW1lIjoiUk9MRV9VU0VSIn1dLCJpYXQiOjE3MzcxOTYxOTQsImV4cCI6MTczNzE5OTc5NH0.8cu9zV7EfnV3eo51O4t371JqZB4QMZDFdscp4PEEOjX_nbicVyei0rsRT4r9AuFOk_WGlyFodXYRqDMVYUC4OA
-    ```
+7. **Verify the Setup**  
+   Test the API endpoints or access the server to ensure everything is configured correctly.
