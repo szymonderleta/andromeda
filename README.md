@@ -35,8 +35,8 @@ Legend:
 |-------------------------------------------------------------------------------------------|--------------|---------|--------------|------------------------------------------------------------------|
 | [Element Web App](https://github.com/szymonderleta/andromeda/tree/main/apps/element)      | Frontend App | 0.0.0   | 🟦 **WIP**   | Web application providing a user interface for Element services. |
 | [Element Game App](https://github.com/szymonderleta/andromeda/tree/main/apps/element)     | Game App     | 0.0.0   | 🟥 **To-Do** | Custom trading card game application.                            |
-| [Element Rest Api](https://github.com/szymonderleta/andromeda/tree/main/apps/element)     | Server App   | 2.0.0   | 🟦 **WIP**   | REST API for managing and distributing Element game data.        |
-| [Element Database](https://github.com/szymonderleta/andromeda/tree/main/database/element) | Schema       | 1.0.0   | 🟦 **WIP**   | Database schema for production and testing purposes.             |
+| [Element Rest Api](https://github.com/szymonderleta/andromeda/tree/main/apps/element)     | Server App   | 0.0.0   | 🟦 **WIP**   | REST API for managing and distributing Element game data.        |
+| [Element Database](https://github.com/szymonderleta/andromeda/tree/main/database/element) | Schema       | 0.0.0   | 🟦 **WIP**   | Database schema for production and testing purposes.             |
 
 ***
 #### [Chess Apps](https://github.com/szymonderleta/andromeda/tree/main/apps/chess)
@@ -45,7 +45,7 @@ Legend:
 |---------------------------------------------------------------------------------------|--------------|---------|------------|--------------------------------------------------------------|
 | [Chess Web App](https://github.com/szymonderleta/andromeda/tree/main/apps/chess)      | Frontend App | 0.0.0   | 🟦 **WIP** | Chess webpage providing a user interface                     |
 | [Chess Game App](https://github.com/szymonderleta/andromeda/tree/main/apps/chess)     | Game App     | 0.0.0   | 🟦 **WIP** | Chess game application allowing users to play chess          |
-| [Chess Rest API](https://github.com/szymonderleta/andromeda/tree/main/apps/chess)     | Server App   | 2.0.0   | 🟦 **WIP** | REST API for managing chess data and distributing it to apps |
+| [Chess Rest API](https://github.com/szymonderleta/andromeda/tree/main/apps/chess)     | Server App   | 1.4.0   | 🟦 **WIP** | REST API for managing chess data and distributing it to apps |
 | [Chess Database](https://github.com/szymonderleta/andromeda/tree/main/database/chess) | Schema       | 1.0.0   | 🟦 **WIP** | Database schema for production and testing                   |
 
 ***
@@ -54,7 +54,7 @@ Legend:
 | Name                                                                                         | Type         | Version | Status      | Short Description                                                                                      |
 |----------------------------------------------------------------------------------------------|--------------|---------|-------------|--------------------------------------------------------------------------------------------------------|
 | [Nebula Web App](https://github.com/szymonderleta/andromeda/tree/main/apps/nebula-web-app)   | Frontend App | 1.0.0   | 🟦 **WIP**  | Web home page used for login and redirection to other services. Allows users to update settings.       |
-| [Nebula Rest API](https://github.com/szymonderleta/andromeda/tree/main/apps/nebula-rest-api) | Server App   | 2.0.0   | 🟪 **Beta** | REST API intermediary between Andromeda Auth and other services. Handles reading and writing settings. |
+| [Nebula Rest API](https://github.com/szymonderleta/andromeda/tree/main/apps/nebula-rest-api) | Server App   | 2.0.10  | 🟪 **Beta** | REST API intermediary between Andromeda Auth and other services. Handles reading and writing settings. |
 | [Nebula Database](https://github.com/szymonderleta/andromeda/tree/main/database/nebula)      | Schema       | 1.0.0   | 🟪 **Beta** | Database schema used for production and testing.                                                       |
 
 ***
@@ -72,6 +72,9 @@ Legend:
 
 ![andromeda-logic.drawio-2025-01-29-dark.png](res/andromeda-logic.drawio-2025-01-29-dark.png)
 Last updated: 29.01.2025
+
+
+
 
 ## Licence
 Andromeda is an open-source project based on the Apache 2.0 license
