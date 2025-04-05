@@ -17,21 +17,61 @@ Andromeda is a microservices-based platform serving as local single-player, brow
 
 Each application and microservice has its dedicated directory containing source code, description of abilities, functions, database schema and means of communication.
 
-### List of Applications with current status:
+### List of Applications and databases with current status:
 
-| Application Name                                                                                  | Version | Database                                                                                    | Status |
-|---------------------------------------------------------------------------------------------------|---------|---------------------------------------------------------------------------------------------|--------|
-| [Andromeda Auth](https://github.com/szymonderleta/andromeda/tree/main/apps/andromeda-auth-server) | 2.0.1   | [Andromeda Schema](https://github.com/szymonderleta/andromeda/tree/main/database/andromeda) | Beta   |
-| [Nebula Rest Api](https://github.com/szymonderleta/andromeda/tree/main/apps/nebula-rest-api)      | 2.0.0   | [Nebula Schema](https://github.com/szymonderleta/andromeda/tree/main/database/nebula)       | Beta   |
-| [Chess](https://github.com/szymonderleta/andromeda/tree/main/apps/chess)                          | 0.5     | [Chess Schema](https://github.com/szymonderleta/andromeda/tree/main/database/chess)         | WIP    |
-| [Element](https://github.com/szymonderleta/andromeda/tree/main/apps/element)                      | 0.0     | [Element Schema](https://github.com/szymonderleta/andromeda/tree/main/database/element)     | To-Do  |
+Legend:
+
+| Status          | Description                                                         |
+|-----------------|---------------------------------------------------------------------|
+| 🟩 **Released** | App is ready to use and deployed.                                   |
+| 🟪 **Beta**     | App is in an early stage, might be on production but needs updates. |
+| 🟦 **WIP**      | App is under development.                                           |
+| 🟥 **To-Do**    | App is planned.                                                     |
+
+***
+#### [Element Apps](https://github.com/szymonderleta/andromeda/tree/main/apps/element)
+
+| Name                                                                                      | Type         | Version | Status       | Short Description                                                |
+|-------------------------------------------------------------------------------------------|--------------|---------|--------------|------------------------------------------------------------------|
+| [Element Web App](https://github.com/szymonderleta/andromeda/tree/main/apps/element)      | Frontend App | 0.0.0   | 🟦 **WIP**   | Web application providing a user interface for Element services. |
+| [Element Game App](https://github.com/szymonderleta/andromeda/tree/main/apps/element)     | Game App     | 0.0.0   | 🟥 **To-Do** | Custom trading card game application.                            |
+| [Element Rest Api](https://github.com/szymonderleta/andromeda/tree/main/apps/element)     | Server App   | 2.0.0   | 🟦 **WIP**   | REST API for managing and distributing Element game data.        |
+| [Element Database](https://github.com/szymonderleta/andromeda/tree/main/database/element) | Schema       | 1.0.0   | 🟦 **WIP**   | Database schema for production and testing purposes.             |
+
+***
+#### [Chess Apps](https://github.com/szymonderleta/andromeda/tree/main/apps/chess)
+
+| Name                                                                                  | Type         | Version | Status     | Short Description                                            |
+|---------------------------------------------------------------------------------------|--------------|---------|------------|--------------------------------------------------------------|
+| [Chess Web App](https://github.com/szymonderleta/andromeda/tree/main/apps/chess)      | Frontend App | 0.0.0   | 🟦 **WIP** | Chess webpage providing a user interface                     |
+| [Chess Game App](https://github.com/szymonderleta/andromeda/tree/main/apps/chess)     | Game App     | 0.0.0   | 🟦 **WIP** | Chess game application allowing users to play chess          |
+| [Chess Rest API](https://github.com/szymonderleta/andromeda/tree/main/apps/chess)     | Server App   | 2.0.0   | 🟦 **WIP** | REST API for managing chess data and distributing it to apps |
+| [Chess Database](https://github.com/szymonderleta/andromeda/tree/main/database/chess) | Schema       | 1.0.0   | 🟦 **WIP** | Database schema for production and testing                   |
+
+***
+#### [Nebula Apps ](https://github.com/szymonderleta/andromeda/tree/main/apps/nebula)
+
+| Name                                                                                         | Type         | Version | Status      | Short Description                                                                                      |
+|----------------------------------------------------------------------------------------------|--------------|---------|-------------|--------------------------------------------------------------------------------------------------------|
+| [Nebula Web App](https://github.com/szymonderleta/andromeda/tree/main/apps/nebula-web-app)   | Frontend App | 1.0.0   | 🟦 **WIP**  | Web home page used for login and redirection to other services. Allows users to update settings.       |
+| [Nebula Rest API](https://github.com/szymonderleta/andromeda/tree/main/apps/nebula-rest-api) | Server App   | 2.0.0   | 🟪 **Beta** | REST API intermediary between Andromeda Auth and other services. Handles reading and writing settings. |
+| [Nebula Database](https://github.com/szymonderleta/andromeda/tree/main/database/nebula)      | Schema       | 1.0.0   | 🟪 **Beta** | Database schema used for production and testing.                                                       |
+
+***
+
+#### [Andromeda Apps](https://github.com/szymonderleta/andromeda/tree/main/apps/andromeda)
+
+| Name                                                                                                | Type       | Version | Status          | Short Description                                                                                                   |
+|-----------------------------------------------------------------------------------------------------|------------|---------|-----------------|---------------------------------------------------------------------------------------------------------------------|
+| [Andromeda Auth](https://github.com/szymonderleta/andromeda/tree/main/apps/andromeda-auth-server)   | Server App | 3.0.0   | 🟩 **Released** | Used for authorization, authentication, token distribution, mail sending, creation and updating of user credentials |
+| [Andromeda Cloud](https://github.com/szymonderleta/andromeda/tree/main/apps/andromeda-cloud-server) | Server App | 1.1.4   | 🟩 **Released** | Used to distribute configuration to other apps                                                                      |
+| [Andromeda Database](https://github.com/szymonderleta/andromeda/tree/main/database/andromeda)       | Schema     | 1.0.0   | 🟪 **Beta**     | Schema for production and testing                                                                                   |
 
 
 ### Services Logic Layers
 
 ![andromeda-logic.drawio-2025-01-29-dark.png](res/andromeda-logic.drawio-2025-01-29-dark.png)
-
+Last updated: 29.01.2025
 
 ## Licence
 Andromeda is an open-source project based on the Apache 2.0 license
-

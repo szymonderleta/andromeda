@@ -4,9 +4,12 @@
 This folder contains all applications related to the [Andromeda Project]. Each application serves a specific purpose and works together to deliver the desired functionality of the project.
 
 ## Folder Structure
-- **/andromeda-cloud-server/**: Contains a cloud server application, written in Java 21 using Spring Cloud, used for storing configurations for other applications.
-- **/andromeda-auth-server/**: Contains an authorization server application, written in Java 21 using Spring Boot and JDBC, used for validate authorization and authentication, generate tokens JWS, sending mails to users.
-- **/nebula-rest-api/**: Contains a REST API application, written in Java 21 using Spring Boot and Hibernate frameworks, it contains endpoints that allows store general user settings and data.
+
+- **/andromeda/**: Contains the Andromeda family applications. Andromeda is a server app for authorization and
+  authentication purposes.
+- **/nebula/**: Contains the Nebula family applications. Nebula is the main app for user purposes.
+- **/chess/**: Contains the Chess family applications.
+- **/element/**: Contains the Element family applications. Element is a custom trading card game service.
 
 ## Technologies Used
 - **Backend applications**: [Java (Spring, Hibernate ORM)]
