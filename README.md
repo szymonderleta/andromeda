@@ -21,12 +21,12 @@ Each application and microservice has its dedicated directory containing source 
 
 Legend:
 
-| Status          | Description                                                         |
-|-----------------|---------------------------------------------------------------------|
-| 🟩 **Released** | App is ready to use and deployed.                                   |
-| 🟪 **Beta**     | App is in an early stage, might be on production but needs updates. |
-| 🟦 **WIP**      | App is under development.                                           |
-| 🟥 **To-Do**    | App is planned.                                                     |
+| Status          | Description                                                                                      |
+|-----------------|--------------------------------------------------------------------------------------------------|
+| 🟩 **Released** | App is ready to use and deployed. Source code or public repository exist.                        |
+| 🟪 **Beta**     | App is in an early stage, might be on production but needs updates. Source code might be enable. |
+| 🟦 **WIP**      | App is under development in private repository.                                                  |
+| 🟥 **To-Do**    | App is planned.                                                                                  |
 
 ***
 #### [Element Apps](https://github.com/szymonderleta/andromeda/tree/main/apps/element)
