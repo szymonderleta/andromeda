@@ -47,3 +47,29 @@ Installation in the Django application:
 
 ![Export to Django](img/export_django.png)
 
+## Setting up the Run Configuration in IntelliJ
+
+Using the example of nebula-rest-api, to enable the application to run in IntelliJ Ultimate Edition, you need to edit
+the application run configuration.
+
+![img.png](img/intellij-configuration-001.png)
+
+Then, add entries in the VM options to specify the location of the truststore.jks that contains the imported self-signed
+certificate for the andromeda-auth-server:
+
+![img.png](img/intellij-configuration-002.png)
+
+For example:
+
+```bash
+-Djavax.net.ssl.trustStore=/path/to/andromeda-authorization-server/help/truststore.jks
+-Djavax.net.ssl.trustStorePassword=changeit
+```
+
+'changeit' is the default password for the truststore, and it should be changed to your own.
+
+Next, add environment variables:
+
+![img.png](img/intellij-configuration-003.png)
+
+This configuration should allow building and running the application in the local environment.

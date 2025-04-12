@@ -47,3 +47,10 @@ If the tests are correct but require a large number of connections, increase the
 ``` bash
    sudo systemctl restart mariadb
 ```
+
+## Missing environments with authentication for the cloud server
+
+You need to modify the template:
+Click the button at the bottom left, "Edit configuration templates"
+
+![img.png](img/intellij-configuration-004.png)
