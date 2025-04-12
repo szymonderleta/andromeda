@@ -208,5 +208,3 @@ sudo systemctl restart apache2
 ```
 
 Once enabled, you can use `.htaccess` files or Apache configuration files to define rewrite rules.
-
-
