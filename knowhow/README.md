@@ -15,7 +15,7 @@ at https://www.raspberrypi.com/documentation/computers/raspberry-pi-5.html. The 
 version 5 equipped with 8GB of RAM and powered by a wall charger provided by the manufacturer.
 
 ## Logical model
-Under build, image that represents used services and major apps.
+Under build, the image that represents used services and major apps.
 
 ## Main Services
 - **MariaDB 11**: Relational database management system.
