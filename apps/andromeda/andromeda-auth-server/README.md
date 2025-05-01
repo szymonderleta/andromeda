@@ -5,7 +5,11 @@ Current Version: 3.0.0
 Repository: [GitHub - Andromeda Authorization Server](https://github.com/szymonderleta/andromeda-authorization-server-public)
 
 Current Jenkins Configuration: [JENKINS.MD](info/JENKINS.MD)
-
+|  _      _    ____ ___ ______   ___   _  _ _____         |
+| | |    / \  | __ )_ _|  _ \ \ / / \ | \| |_   _|       |
+| | |   / _ \ |  _ \| || |_) \ V /|  \| .` | | |         |
+| | |__/ ___ \| |_) | ||  _ < | | | |\  .` | | |         |
+| |____/_/  \_\____/___|_| \_\|_| |_| \_|\_| |_|         |
 ## Overview
 
 Andromeda Authorization Server is a robust and versatile application built with Java SDK 21 and the advanced Spring Boot
