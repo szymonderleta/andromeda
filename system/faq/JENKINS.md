@@ -1,6 +1,6 @@
-## **Installing Jenkins on Debian/Ubuntu**
+# Jenkins CI/CD 
 
-# SECTION_IS_UNDER_BUILD
+## **Installing Jenkins on Debian/Ubuntu**
 
 ### **1. Prerequisites**
 
@@ -23,4 +23,17 @@ Check if Java has been installed correctly:
 ``` bash
 java -version
 ```
+
+To install jenkins run commands:
+
+```bash
+sudo apt install jenkins
+```
+
+## ** Jenkins on Docker
+
+To use Jenkins via Docker, see the DOCKER.md file.
+
+## ** First run
+
 

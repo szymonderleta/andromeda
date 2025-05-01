@@ -33,6 +33,7 @@ Under build, image that represents used services and major apps.
 - **[SSH.md](faq/SSH.md)**: Documentation about connections via SSH.
 - **[SOLUTIONS.md](faq/SOLUTIONS.md)**: Documentation about known problems and solutions.
 - **[BACKUP.md](faq/BACKUP.md)**: Documentation about backups and maintenance.
+- **[DOCKER.md](faq/DOCKER.md)**: Documentation about configuration Docker platform.
 - **[JENKINS.md](faq/JENKINS.md)**: Documentation about configuration in Jenkins CI/CD.
 - **[TESTING.md](faq/TESTING.md)**: Documentation about testing solutions.
 
