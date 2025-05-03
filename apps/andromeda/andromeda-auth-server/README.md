@@ -1,10 +1,27 @@
 # Andromeda Authorization Server
 
-Author: Szymon Derleta  
-Current Version: 3.0.0  
+Author: Szymon Derleta
+Current Version: 3.1.0 Beta Release
 Repository: [GitHub - Andromeda Authorization Server](https://github.com/szymonderleta/andromeda-authorization-server-public)
 
-Current Jenkins Configuration: [JENKINS.MD](info/JENKINS.MD)
+Current Jenkins Configuration: [JENKINS.MD](https://github.com/szymonderleta/andromeda/blob/main/apps/andromeda/andromeda-auth-server/info/JENKINS.MD)
+
+## Changelog
+
+Version 3.1.0:
+
+1. **Added endpoint for handling access token refresh/generation based on refreshToken cookie.**
+2. **Modified and fixed issues with incorrect cookie expiration dates.**
+3. **Updated unit tests**
+
+Version 3.0.0 Beta Release:
+
+1. **Added over 500 JUnit and integration tests**: Enhanced the reliability and robustness of the application by
+   ensuring comprehensive test coverage across all key components.
+2. **Rebuilt the codebase**: Refactored and optimized the existing code for improved performance, maintainability, and
+   scalability.
+3. **Added support for refresh tokens**: Implemented support for secure refresh tokens. Both access and refresh tokens
+   are now generated as `HttpOnly` cookies to enhance security and prevent client-side access.
 
 ## Overview
 
@@ -25,6 +42,27 @@ Key Features
     4. Jakarta EE and Spring Compatibility: Demonstrates seamless interoperability between Jakarta EE technologies and Spring, combining the strengths of both frameworks for scalable, secure enterprise applications.
 
     5. Enterprise-Level Scalability: Leverages modern Java SDK 21 features and advanced Spring Boot capabilities to provide a highly scalable and maintainable solution for handling access control and user authentication in enterprise systems.
+
+Note: All endpoints should be verified carefully during the final stages of development to ensure security and proper
+functionality. Some of them might need to be removed or restricted for security reasons. Consider this a warning to
+review all endpoints thoroughly, especially those handling sensitive data or authentication, to avoid potential
+vulnerabilities.
+
+## Endpoints Examples:
+
+This application supports and issues JWT-based cookies for accessToken and refreshToken. These tokens are used for authentication and session management. The accessToken provides authorization for accessing protected resources, while the refreshToken allows the renewal of the accessToken when it expires.
+Example Endpoint
+
+The following example demonstrates how to use the refreshToken to obtain a new accessToken. The request is sent to the /api/v1/auth/refresh-access endpoint.
+
+```http request
+POST http://localhost:8443/api/v1/auth/refresh-access
+Content-Type: application/json
+X-Requesting-App: nebula_rest_api
+Cookie: refreshToken=eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxMDAwMDExLHhic212dXpmYXl5emp4ZHhha0Bja3B0ci5jb20iLCJpc3MiOiJEYkNvbm5lY3Rpb25BcHAiLCJyb2xlcyI6W3siaWQiOjEsIm5hbWUiOiJST0xFX1VTRVIifSx7ImlkIjo0LCJuYW1lIjoiUk9MRV9BRE1JTiJ9XSwiaWF0IjoxNzQ2MjY3NDg4LCJleHAiOjE3NDg4NTk0ODh9.vohJv_OODIQ7uSMPoHSOutLrPSVO1OyMi_7Eg32PFPfFzPLOxcnrqm6BV-bI_1WSBKJBOuc5m65aMRSSM019uw
+```
+
+Examples of endpoints in the form of .http files supported by the IntelliJ environment can be found at the location test/endpoints.
 
 ## Building the Project
 
