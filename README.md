@@ -71,10 +71,7 @@ Legend:
 ### Services Logic Layers
 
 ![andromeda-logic.drawio-2025-01-29-dark.png](res/andromeda-logic.drawio-2025-01-29-dark.png)   
-Last updated: 29.01.2025
-
-
-
+Image was last updated: 29.01.2025
 
 ## Licence
 Andromeda is an open-source project based on the Apache 2.0 license
