@@ -27,11 +27,11 @@ The jenkins user inside the official Docker image uses UID 1000.
 
 ```Bash
 sudo docker run -d \
-  --name jenkins \
+  --name info \
   -p 8080:8080 -p 50000:50000 \
   -v /srv/jenkins_home:/var/jenkins_home \
   --restart unless-stopped \
-  jenkins/jenkins:lts
+  info/info:lts
 ```
 
 What this does:
@@ -50,5 +50,5 @@ What this does:
     Login using the initial admin password:
 
 ```Bash
-sudo docker exec jenkins cat /var/jenkins_home/secrets/initialAdminPassword
+sudo docker exec info cat /var/jenkins_home/secrets/initialAdminPassword
 ```

@@ -52,10 +52,10 @@ Legend:
 #### [Nebula Apps ](https://github.com/szymonderleta/andromeda/tree/main/apps/nebula)
 
 | Name                                                                                                | Type         | Version | Status      | Short Description                                                                                      |
-|-----------------------------------------------------------------------------------------------------|--------------|---------|-------------|--------------------------------------------------------------------------------------------------------|
-| [Nebula Web App](https://github.com/szymonderleta/andromeda/tree/main/apps/nebula/nebula-web-app)   | Frontend App | 1.0.0   | 🟦 **WIP**  | Web home page used for login and redirection to other services. Allows users to update settings.       |
-| [Nebula Rest API](https://github.com/szymonderleta/andromeda/tree/main/apps/nebula/nebula-rest-api) | Server App   | 2.0.10  | 🟪 **Beta** | REST API intermediary between Andromeda Auth and other services. Handles reading and writing settings. |
-| [Nebula Database](https://github.com/szymonderleta/andromeda/tree/main/database/nebula)             | Schema       | 1.0.0   | 🟪 **Beta** | Database schema used for production and testing.                                                       |
+|-----------------------------------------------------------------------------------------------------|--------------|--------|-------------|--------------------------------------------------------------------------------------------------------|
+| [Nebula Web App](https://github.com/szymonderleta/andromeda/tree/main/apps/nebula/nebula-web-app)   | Frontend App | 1.0.0  | 🟦 **WIP**  | Web home page used for login and redirection to other services. Allows users to update settings.       |
+| [Nebula Rest API](https://github.com/szymonderleta/andromeda/tree/main/apps/nebula/nebula-rest-api) | Server App   | 3.0.0  | 🟩 **Released**  | REST API intermediary between Andromeda Auth and other services. Handles reading and writing settings. |
+| [Nebula Database](https://github.com/szymonderleta/andromeda/tree/main/database/nebula)             | Schema       | 1.0.0  | 🟪 **Beta** | Database schema used for production and testing.                                                       |
 
 ***
 
@@ -63,7 +63,7 @@ Legend:
 
 | Name                                                                                                          | Type       | Version | Status          | Short Description                                                                                                   |
 |---------------------------------------------------------------------------------------------------------------|------------|---------|-----------------|---------------------------------------------------------------------------------------------------------------------|
-| [Andromeda Auth](https://github.com/szymonderleta/andromeda/tree/main/apps/andromeda/andromeda-auth-server)   | Server App | 3.0.0   | 🟩 **Released** | Used for authorization, authentication, token distribution, mail sending, creation and updating of user credentials |
+| [Andromeda Auth](https://github.com/szymonderleta/andromeda/tree/main/apps/andromeda/andromeda-auth-server)   | Server App | 3.1.1   | 🟩 **Released** | Used for authorization, authentication, token distribution, mail sending, creation and updating of user credentials |
 | [Andromeda Cloud](https://github.com/szymonderleta/andromeda/tree/main/apps/andromeda/andromeda-cloud-server) | Server App | 1.1.4   | 🟩 **Released** | Used to distribute configuration to other apps                                                                      |
 | [Andromeda Database](https://github.com/szymonderleta/andromeda/tree/main/database/andromeda)                 | Schema     | 1.2.0   | 🟪 **Beta**     | Schema for production and testing                                                                                   |
 
