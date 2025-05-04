@@ -2,7 +2,7 @@
 
 Current Version: 3.0.0 Public Release  
 Repository: [GitHub - Nebula Rest Api](https://github.com/szymonderleta/nebula-rest-api-public)  
-Current Jenkins Configuration: [JENKINS.MD](https://github.com/szymonderleta/andromeda/blob/main/apps/andromeda/nebula-rest-api/info/JENKINS.MD)
+Current Jenkins Configuration: [JENKINS.MD](https://github.com/szymonderleta/andromeda/blob/main/apps/nebula/nebula-rest-api/info/JENKINS.MD)
 
 ## Overview
 
