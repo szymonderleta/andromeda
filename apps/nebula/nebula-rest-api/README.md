@@ -1,5 +1,9 @@
 # Nebula REST API
 
+Current Version: 3.0.0 Public Release  
+Repository: [GitHub - Nebula Rest Api](https://github.com/szymonderleta/nebula-rest-api-public)  
+Current Jenkins Configuration: [JENKINS.MD](https://github.com/szymonderleta/andromeda/blob/main/apps/andromeda/nebula-rest-api/info/JENKINS.MD)
+
 ## Overview
 
 Nebula REST API is the home application based on REST API, for the Andromeda platform, designed to provide a centralized login and access
@@ -8,6 +12,11 @@ authenticate and navigate to the games and services offered by the platform. It 
 allows users to upload profile images, and update their preferences.
 
 ## Current Version
+
+**v 3.0.0 Public Release**
+- Added over 400 unit and integration tests.
+- Added an endpoint to refresh the accessToken (using the cookie with a valid refreshToken). Removed the old JWT token cookie system and replaced it with both accessToken and refreshToken, which are now stored as HttpOnly cookies. The accessToken is valid for 1 hour, while the refreshToken is valid for over 20 days.
+- Fixed small errors and refactored some parts of the code.
 
 **v 2.0.0 Beta Release**  
 This version is intended for testing purposes in a pre-production environment.
@@ -43,5 +52,3 @@ The API documentation is available at the following URLs:
 
 - Improve the password reset mechanism by implementing a verification link with expiration instead of directly sending a
   new password via email.
-
-  

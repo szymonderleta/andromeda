@@ -27,7 +27,7 @@ java -version
 To install jenkins run commands:
 
 ```bash
-sudo apt install jenkins
+sudo apt install info
 ```
 
 ## ** Jenkins on Docker

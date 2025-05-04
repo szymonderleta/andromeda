@@ -28,12 +28,13 @@ Under build, the image that represents used services and major apps.
 - **[CERTIFICATE.md](faq/CERTIFICATE.md)**: Documentation about self-signed certificates used in Andromeda.
 - **[HTTPS.md](faq/HTTPS.md)**: Documentation about how configure https connections.
 - **[APACHE2.md](faq/APACHE2.md)**: Documentation about Apache2 configuration.
-- **[DATABASE.md](faq/DATABASE.md)**: Documentation about database system and basic configuration.
+- **[DATABASE.md](faq/DATABASE.md)**: Documentation about a database system and basic configuration.
 - **[TOMCAT.md](faq/TOMCAT.md)**: Documentation about Apache Tomcat server and basic configuration.
 - **[SSH.md](faq/SSH.md)**: Documentation about connections via SSH.
+- **[GIT.md](faq/GIT.md)**: Instructions about using git commands in an andromeda project.
 - **[SOLUTIONS.md](faq/SOLUTIONS.md)**: Documentation about known problems and solutions.
 - **[BACKUP.md](faq/BACKUP.md)**: Documentation about backups and maintenance.
-- **[DOCKER.md](faq/DOCKER.md)**: Documentation about configuration Docker platform.
+- **[DOCKER.md](faq/DOCKER.md)**: Documentation about a configuration Docker platform.
 - **[JENKINS.md](faq/JENKINS.md)**: Documentation about configuration in Jenkins CI/CD.
 - **[TESTING.md](faq/TESTING.md)**: Documentation about testing solutions.
 
