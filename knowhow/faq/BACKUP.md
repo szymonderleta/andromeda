@@ -127,3 +127,22 @@ Backup of all databases:
 mysqldump -u root -p --all-databases > /mnt/nvme/mysql_backup/backup_all_2024-11-17.sql
 ```
 
+### Full Backup of the Database (Including Users and Privileges)
+
+Run the following on the Raspberry Pi where your MariaDB is currently hosted:
+```bash
+# Dump all databases, including routines, triggers, and events
+mysqldump -u root -p --all-databases --routines --events --triggers --single-transaction --flush-privileges > full_backup.sql
+```
+
+(Optional) Dump user grants separately:
+```Bash
+mysql -u root -p -NBe "SELECT CONCAT('SHOW GRANTS FOR ''', user, '''@''', host, ''';') FROM mysql.user;" \
+| mysql -u root -p \
+| sed 's/$/;/' > user_grants.sql
+```
+
+Secure the backup files:
+```Bash
+chmod 600 full_backup.sql user_grants.sql
+```
