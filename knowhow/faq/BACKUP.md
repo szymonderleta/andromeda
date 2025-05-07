@@ -30,6 +30,30 @@ another SD card, simply specify the source as the image and the target as the SD
 ```Bash
 sudo dd bs=4M if=/media/user/ANDROMEDA_2024_BACKUP/ISO/andromeda_backup_2024_02_03.img of=/dev/sda conv=fsync
 ```
+## Automatic Image Shrinking with `pishrink.sh` (Easiest)
+
+This works only on `.img` files, but you can rename a `.iso` to `.img` if it's a raw copy made using `dd`.
+
+### 📥 Download `pishrink.sh`:
+
+go to backup image catalog
+```Bash
+cd /media/user/ANDROMEDA_2024_BACKUP/ISO
+```
+
+```bash
+wget https://raw.githubusercontent.com/Drewsif/PiShrink/master/pishrink.sh
+chmod +x pishrink.sh
+```
+
+Run it on the image:
+```Bash
+sudo ./pishrink.sh andromeda_backup_2024_02_03.img
+```
+
+✅ Done
+
+This will create a smaller .img file that can be restored as usual and will automatically expand to the full size of the SD card on the first boot.
 
 ## rsync backup on Raspberry Pi to NVME
 
