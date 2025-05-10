@@ -144,3 +144,4 @@ Then import the data:
 ``` bash
    mysql -u root -p test_andromeda < andromeda.sql
 ```
+

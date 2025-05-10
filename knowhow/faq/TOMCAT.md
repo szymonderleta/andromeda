@@ -193,7 +193,7 @@ Commands to allow saving avatars by the `nebula-rest-api` program running on the
 ReadWritePaths=/var/www/html/user/avatar/
 ```
 
-Restarting daemon is required:
+Restarting the daemon is required:
 
 ```Bash
 sudo systemctl daemon-reload

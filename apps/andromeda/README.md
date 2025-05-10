@@ -8,8 +8,7 @@ This folder contains all Andromeda family applications related to the [Andromeda
 - **/andromeda-auth-server/**: Contains an authorization server application, written in Java 21 using Spring Boot and JDBC, used for validate authorization and authentication, generate tokens JWS, sending mails to users.
 
 ## Technologies Used
-- **Backend applications**: [Java (Spring, Hibernate ORM)]
-- **Frontend applications**: [JavaScript (React), Python (Django)]
+- **Backend applications**: [Java (Spring, Hibernate ORM, JDBC, Lombok)]
 - **Communication**: REST API.
 
 ## License

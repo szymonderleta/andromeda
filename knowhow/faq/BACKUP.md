@@ -30,6 +30,28 @@ another SD card, simply specify the source as the image and the target as the SD
 ```Bash
 sudo dd bs=4M if=/media/user/ANDROMEDA_2024_BACKUP/ISO/andromeda_backup_2024_02_03.img of=/dev/sda conv=fsync
 ```
+## Automatic Image Shrinking with `pishrink.sh` (Easiest)
+
+This works only on `.img` files, but you can rename a `.iso` to `.img` if it's a raw copy made using `dd`.
+
+### Download `pishrink.sh`:
+
+go to backup image catalog
+```Bash
+cd /media/user/ANDROMEDA_2024_BACKUP/ISO
+```
+
+```bash
+wget https://raw.githubusercontent.com/Drewsif/PiShrink/master/pishrink.sh
+chmod +x pishrink.sh
+```
+
+Run it on the image:
+```Bash
+sudo ./pishrink.sh andromeda_backup_2024_02_03.img
+```
+
+This will create a smaller .img file that can be restored as usual and will automatically expand to the full size of the SD card on the first boot.
 
 ## rsync backup on Raspberry Pi to NVME
 
@@ -105,3 +127,22 @@ Backup of all databases:
 mysqldump -u root -p --all-databases > /mnt/nvme/mysql_backup/backup_all_2024-11-17.sql
 ```
 
+### Full Backup of the Database (Including Users and Privileges)
+
+Run the following on the Raspberry Pi where your MariaDB is currently hosted:
+```bash
+# Dump all databases, including routines, triggers, and events
+mysqldump -u root -p --all-databases --routines --events --triggers --single-transaction --flush-privileges > full_backup.sql
+```
+
+(Optional) Dump user grants separately:
+```Bash
+mysql -u root -p -NBe "SELECT CONCAT('SHOW GRANTS FOR ''', user, '''@''', host, ''';') FROM mysql.user;" \
+| mysql -u root -p \
+| sed 's/$/;/' > user_grants.sql
+```
+
+Secure the backup files:
+```Bash
+chmod 600 full_backup.sql user_grants.sql
+```
