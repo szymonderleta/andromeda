@@ -10,6 +10,29 @@ This guide explains how to publish only the **latest state** of your project to 
 
 ## Steps
 
+### 0. Requisite
+
+The first time needs to add a public repository, example adding for Nebula Front App
+
+```bash
+git remote add public https://github.com/szymonderleta/nebula-front-app-public.git
+```
+
+then running command
+
+```Bash
+git remote -v
+```
+
+should return the similar output:
+
+```Bash
+origin  https://github.com/szymonderleta/nebula-front-app (fetch)
+origin  https://github.com/szymonderleta/nebula-front-app (push)
+public  https://github.com/szymonderleta/nebula-front-app-public.git (fetch)
+public  https://github.com/szymonderleta/nebula-front-app-public.git (push)
+```
+
 ### 1. Switch to the Source Branch
 Switch to the branch that contains the latest code you want to publish:
 
