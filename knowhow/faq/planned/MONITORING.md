@@ -223,7 +223,7 @@ Access:
 ## Comparison
 
 | Feature     | Raspberry Pi           | Laptop (Docker)             |
-| ----------- | ---------------------- | --------------------------- |
+|-------------|------------------------|-----------------------------|
 | Setup Type  | Manual (APT, services) | Automated (Docker Compose)  |
 | Performance | Limited (ARM, low RAM) | High (multi-core, more RAM) |
 | Scalability | Low                    | High                        |

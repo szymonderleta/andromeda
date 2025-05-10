@@ -46,4 +46,3 @@ exchanged.
 
 SSH is widely used in IT for tasks like remote server administration, secure file transfers, and automated scripts. It
 is secure, reliable, and a standard tool for managing networked systems.
-

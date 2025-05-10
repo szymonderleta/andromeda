@@ -11,7 +11,7 @@ The Andromeda platform consists of a Raspberry Pi 5 computer, Debian 12 operatin
 Tomcat server, and a set of applications described in subsequent chapters of the documentation.
 
 The Raspberry Pi platform specification is available on the manufacturer's website
-at https://www.raspberrypi.com/documentation/computers/raspberry-pi-5.html. The Andromeda platform uses a Raspberry Pi
+at https://www.raspberrypi.com/documentation/computers/raspberry-pi-5.html. The Andromeda platform uses Raspberry Pi
 version 5 equipped with 8GB of RAM and powered by a wall charger provided by the manufacturer.
 
 ## Logical model
