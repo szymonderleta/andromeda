@@ -7,7 +7,9 @@ This folder contains all Chess family applications related to the [Andromeda Pro
 Work in progress
 
 ## Technologies Used
-Work in progress
+- **Backend applications**: [Java (Spring, Hibernate ORM)]
+- **Frontend applications**: [JavaScript (React), Python (Django)]
+- **Communication**: REST API.
 
 ## License
 [Apache 2.0]
