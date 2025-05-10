@@ -31,22 +31,22 @@ Legend:
 ***
 #### [Element Apps](https://github.com/szymonderleta/andromeda/tree/main/apps/element)
 
-| Name                                                                                      | Type         | Version | Status       | Short Description                                                |
-|-------------------------------------------------------------------------------------------|--------------|---------|--------------|------------------------------------------------------------------|
-| [Element Web App](https://github.com/szymonderleta/andromeda/tree/main/apps/element)      | Frontend App | 0.1.0   | 🟨 **WIP**   | Web application providing a user interface for Element services. |
-| [Element Game App](https://github.com/szymonderleta/andromeda/tree/main/apps/element)     | Game App     | 0.0.0   | 🟥 **To-Do** | Custom trading card game application.                            |
-| [Element Rest Api](https://github.com/szymonderleta/andromeda/tree/main/apps/element)     | Server App   | 0.1.0   | 🟨 **WIP**   | REST API for managing and distributing Element game data.        |
-| [Element Database](https://github.com/szymonderleta/andromeda/tree/main/database/element) | Schema       | 0.1.0   | 🟨 **WIP**   | Database schema for production and testing purposes.             |
+| Name               | Type         | Version | Status       | Short Description                                                |
+|--------------------|--------------|---------|--------------|------------------------------------------------------------------|
+| [Element Web App]  | Frontend App | 0.1.0   | 🟨 **WIP**   | Web application providing a user interface for Element services. |
+| [Element Game App] | Game App     | 0.0.0   | 🟥 **To-Do** | Custom trading card game application.                            |
+| [Element Rest Api] | Server App   | 0.1.0   | 🟨 **WIP**   | REST API for managing and distributing Element game data.        |
+| [Element Database] | Schema       | 0.1.0   | 🟨 **WIP**   | Database schema for production and testing purposes.             |
 
 ***
 #### [Chess Apps](https://github.com/szymonderleta/andromeda/tree/main/apps/chess)
 
-| Name                                                                                  | Type         | Version | Status       | Short Description                                            |
-|---------------------------------------------------------------------------------------|--------------|---------|--------------|--------------------------------------------------------------|
-| [Chess Web App](https://github.com/szymonderleta/andromeda/tree/main/apps/chess)      | Frontend App | 0.5.0   | 🟦 **Beta**  | Chess webpage providing a user interface                     |
-| [Chess Game App](https://github.com/szymonderleta/andromeda/tree/main/apps/chess)     | Game App     | 0.5.0   | 🟦 **Beta*** | Chess game application allowing users to play chess          |
-| [Chess Rest API](https://github.com/szymonderleta/andromeda/tree/main/apps/chess)     | Server App   | 1.4.0   | 🟦 **Beta**  | REST API for managing chess data and distributing it to apps |
-| [Chess Database](https://github.com/szymonderleta/andromeda/tree/main/database/chess) | Schema       | 1.0.0   | 🟦 **Beta**  | Database schema for production and testing                   |
+| Name             | Type         | Version | Status       | Short Description                                            |
+|------------------|--------------|---------|--------------|--------------------------------------------------------------|
+| [Chess Web App]  | Frontend App | 0.5.0   | 🟦 **Beta**  | Chess webpage providing a user interface                     |
+| [Chess Game App] | Game App     | 0.5.0   | 🟦 **Beta*** | Chess game application allowing users to play chess          |
+| [Chess Rest API] | Server App   | 1.4.0   | 🟦 **Beta**  | REST API for managing chess data and distributing it to apps |
+| [Chess Database] | Schema       | 1.0.0   | 🟦 **Beta**  | Database schema for production and testing                   |
 
 ***
 #### [Nebula Apps ](https://github.com/szymonderleta/andromeda/tree/main/apps/nebula)
