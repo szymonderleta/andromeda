@@ -49,7 +49,6 @@ is secure, reliable, and a standard tool for managing networked systems.
 
 ### Deploying React APP
 
-
 🚀 Deployment Instructions
 
 These steps describe how to deploy a Frontend App build to a remote server.
