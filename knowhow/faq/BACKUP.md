@@ -72,7 +72,7 @@ extended attributes, with verbose output.
 Excludes system directories like '/dev', '/proc', '/sys', and others that don't need to be backed up:
 
 ```Bash
-sudo rsync -aAXv / /mnt/nvme/backup –exclude={"/dev/*","/proc/*","/sys/*","/tmp/*","/run/*","/mnt/*","/media/*","/lost+found"}
+sudo rsync -aAXv / /mnt/nvme/backup --exclude={"/dev/*","/proc/*","/sys/*","/tmp/*","/run/*","/mnt/*","/media/*","/lost+found"}
 ```
 
 To restore backup using rsync:
