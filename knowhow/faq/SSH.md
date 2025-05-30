@@ -46,3 +46,45 @@ exchanged.
 
 SSH is widely used in IT for tasks like remote server administration, secure file transfers, and automated scripts. It
 is secure, reliable, and a standard tool for managing networked systems.
+
+### Deploying React APP
+
+
+🚀 Deployment Instructions
+
+These steps describe how to deploy a Frontend App build to a remote server.
+🧾 Prerequisites
+
+    SSH access to the target server (e.g. user@your-server.com)
+
+    sudo privileges on the server
+
+    A completed frontend build located locally, e.g.:
+
+    /path/to/your/project/build/
+
+📦 Deployment Steps
+
+#### 1. Clean up any previous build files on the remote server
+```bash
+ssh user@your-server.com "rm -rf /home/user/temp_build/*"
+```
+
+#### 2. Upload the new build to the remote server
+```bash
+scp -r /path/to/your/project/build/* user@your-server.com:/home/user/temp_build
+```
+#### 3. Remove existing files from the web server's deployment directory
+```bash
+ssh user@your-server.com "sudo rm -rf /var/www/html/your-app/*"
+```
+#### 4. Move uploaded build files into the web server directory
+```bash
+ssh user@your-server.com "sudo mv /home/user/temp_build/* /var/www/html/your-app/"
+```
+#### 5. (Optional) Sync static assets separately if needed
+```bash
+ssh user@your-server.com "sudo rsync -a /home/user/temp_build/static/ /var/www/html/your-app/static/"
+```
+    💡 Tip: You can create a deploy.sh script to automate this process for faster deployment.
+
