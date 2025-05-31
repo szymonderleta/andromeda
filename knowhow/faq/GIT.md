@@ -1,14 +1,14 @@
 # GIT
 
-## **Main instructions used in andromeda project**
+**Main instructions used in andromeda project**
 
-### Publishing a Clean `master` Branch from a Private Repository to a Public One
+## Publishing a Clean `master` Branch from a Private Repository to a Public One
 
 This guide explains how to publish only the **latest state** of your project to a public repository, **without including any commit history**. This is useful when sharing a clean version of a project while keeping the original history private.
 
 ---
 
-## Steps
+### Steps
 
 ### 0. Requisite
 
@@ -80,4 +80,42 @@ What This Does
     This process does not delete any files, only the commit history.
 
     Using --force will permanently replace the history on the remote master branch. Ensure no one depends on the old commit history before proceeding.
+
+
+---
+### 🔧 Merging Unrelated Histories (e.g., Merging `v3.1` into `public-history`)
+
+If you are working with separate branches that do **not share commit history**—for example, a clean `master` branch with only the latest release (`v3.1`) and a `public-history` branch with older versions (like `v3.0`)—Git will prevent a direct merge by default.
+
+To merge them, you must explicitly allow unrelated histories:
+
+### 📌 Steps
+
+1. **Check out the historical branch:**
+
+   ```bash
+   git checkout public-history
+    ```
+
+2. Merge the current master branch (or any branch with unrelated history):
+
+   ```bash
+   git merge master --allow-unrelated-histories
+    ```
+3. Resolve any merge conflicts (if prompted):
+
+- Open conflicting files and fix issues manually.
+- Stage the resolved files:
+```Bash
+git add . 
+```
+- Complete the merge:
+```Bash
+git commit
+```
+4. Push the changes to your remote repository:
+```Bash
+git push origin public-history 
+```
+
 
