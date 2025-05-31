@@ -9,7 +9,7 @@
 
 📄 Changelog: [CHANGELOG.md](info/CHANGELOG.md)  
 🔗 Repository: [GitHub - Nebula Rest Api](https://github.com/szymonderleta/nebula-rest-api-public)  
-🛠️ Jenkins Pipeline: [JENKINS.MD](info/JENKINS.MD)
+🛠️ Jenkins Pipeline: [JENKINS.md](info/JENKINS.md)
 </div>
 
 ## Overview
