@@ -7,7 +7,7 @@
 ![Release](https://img.shields.io/badge/Release-First%20Public%20Release-green?style=for-the-badge)  
 ![Version](https://img.shields.io/badge/Version-3.0.0-green?style=for-the-badge)
 
-📄 Changelog: [Changelog](src/documentation/CHANGELOG.md)  
+📄 Changelog: [Changelog](info/CHANGELOG.md)  
 🔗 Repository: [GitHub - Nebula Front App](https://github.com/szymonderleta/nebula-front-app-public)   
 🛠️ Jenkins Pipeline: N/A
 
