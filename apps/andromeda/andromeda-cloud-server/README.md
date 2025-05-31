@@ -1,95 +1,102 @@
-Andromeda Cloud Server
-Overview
+# ☁️ Andromeda Cloud Server
 
-Andromeda Cloud Server is a robust application built on Spring Cloud, Spring Security and Java 21, designed to securely store encrypted passwords, logins, and addresses for use by other applications. This server provides a centralized and reliable solution for managing sensitive information, offering enhanced security features through encryption mechanisms.
-Features
+<div align="left">
 
-    Secure Storage: Andromeda Cloud Server ensures the safekeeping of sensitive data by utilizing advanced encryption techniques, providing an extra layer of protection against unauthorized access.
+![Author](https://img.shields.io/badge/Author-Szymon%20Derleta-white?style=for-the-badge)
 
-    Spring Cloud Architecture: The application is constructed with the powerful Spring Cloud framework, ensuring scalability, resilience, and efficient communication between microservices.
+![Release](https://img.shields.io/badge/Release-Public%20Release-green?style=for-the-badge)  
+![Version](https://img.shields.io/badge/Version-1.1.4-green?style=for-the-badge)
 
-    Java 21: Leveraging the latest advancements in the Java programming language, Andromeda Cloud Server benefits from improved performance, language features, and security enhancements.
+📄 Changelog: N/A  
+🔗 Repository: [src](src)
 
-Getting Started
+</div>
 
-To deploy Andromeda Cloud Server, follow these steps:
+---
 
-    Prerequisites: Ensure you have Java 21 installed on your system.
+## Overview
 
-    Clone the Repository: Clone the Andromeda Cloud Server repository to your local machine.
+Andromeda Cloud Server is a robust application built with **Spring Cloud**, **Spring Security**, and **Java 21**.  
+It securely stores encrypted passwords, logins, and addresses to be used by other applications in the Andromeda ecosystem.
 
-    bash
+This server provides a centralized, reliable solution for managing sensitive information, enhanced by strong encryption mechanisms.
 
-git clone https://github.com/szymonderleta/andromeda-cloud-server.git
+---
 
-Build and Run: Navigate to the project directory and build the application using your favorite build tool (e.g., Maven or Gradle). Run the server to start providing secure storage services.
+## Features
 
-bash
+- **Secure Storage**  
+  Utilizes advanced encryption techniques to protect sensitive data from unauthorized access.
 
-    cd andromeda-cloud-server
-    mvn clean install
-    java -jar target/andromeda-cloud-server.jar
+- **Spring Cloud Architecture**  
+  Built on Spring Cloud to ensure scalability, resilience, and efficient communication between microservices.
 
-    Integrate with Other Applications: Utilize the provided API documentation to integrate Andromeda Cloud Server with your applications securely.
+- **Java 21**  
+  Leverages the latest Java features and performance improvements.
 
-Documentation
+---
 
-To configure_and customize the Andromeda Cloud Server, you will need to modify the `application.properties` file located
-in the `src/main/resources` directory. Below are examples of configuration settings that can be included in the file:
+## Getting Started
+
+**Note:** The standalone repository for Andromeda Cloud Server is currently not available.  
+However, the full source code is included within this repository under the `src` directory.
+
+---
+## Documentation
+
+To configure and customize the Andromeda Cloud Server, modify the `application.properties` file located in the  
+`src/main/resources` directory. Below is an example configuration with commonly used settings:
 
 ```properties
 # Server Configuration
 server.port=8888
+
 # Security Configuration
 spring.security.user.name=root
 spring.security.user.password=_k3vKj$8qR*mNx!2
+
 # Application Name
 spring.application.name=cloud-server
+
 # Active Profiles
 spring.profiles.active=native
+
 # Spring Cloud Config Server - Native Mode
 spring.cloud.config.server.native.searchLocations=/etc/config-repo
 ```
 
-### Explanation:
+Configuration Explanation
 
-1. **Server Configuration**
+    Server Configuration
 
-    - `server.port=8888`: This property sets the port on which the Andromeda Cloud Server will run. In this case, it is
-      configured to run on port 8888 instead of the default port 8080.
+        server.port=8888
+        Sets the port on which Andromeda Cloud Server runs. The default port (8080) is overridden here to 8888.
 
-2. **Security Configuration**
+    Security Configuration
 
-    - `spring.security.user.name=root`: This sets the default username for basic security authentication.
-    - `spring.security.user.password=_k3vKj$8qR*mNx!2`: This sets the password for the default user. Ensure that you
-      keep this password secure and do not expose it in public repositories.
+        spring.security.user.name=root
+        Default username for basic authentication.
 
-3. **Application Name**
+        spring.security.user.password=_k3vKj$8qR*mNx!2
+        Default password for the user. Keep this password secure and avoid exposing it in public repositories.
 
-    - `spring.application.name=cloud-server`: This sets the name of the Spring application to "cloud-server".
+    Application Name
 
-4. **Active Profiles**
+        spring.application.name=cloud-server
+        Defines the Spring application’s name.
 
-    - `spring.profiles.active=native`: This specifies the active profile for the application. In this case, the "native"
-      profile is active, which typically means that the configuration properties will be loaded from a local file system
-      repository.
+    Active Profiles
 
-5. **Spring Cloud Config Server - Native Mode**
+        spring.profiles.active=native
+        Activates the native profile, meaning configuration properties will be loaded from a local file system repository.
 
-    - `spring.cloud.config.server.native.searchLocations=/etc/config-repo`: When using Spring Cloud Config Server in
-      native mode, this property defines the location where the configuration files are stored. Here, it points to the
-      directory `/etc/config-repo`.
+    Spring Cloud Config Server - Native Mode
 
-Save the `application.properties` file after making your changes. Restart the server to apply the new configurations.
+        spring.cloud.config.server.native.searchLocations=/etc/config-repo
+        Specifies the directory where configuration files are stored when using Spring Cloud Config Server in native mode.
 
-For further customization options and detailed documentation, please refer to
-the [Spring Boot documentation](https://docs.spring.io/spring-boot/docs/current/reference/html/application-properties.html).
+After making changes to application.properties, save the file and restart the server to apply the new settings.
 
-Detailed documentation, including API specifications and usage guidelines, can be found in the docs directory of this repository.
-Contribution
-
-We welcome contributions to enhance the functionality, security, and overall performance of Andromeda Cloud Server. Feel free to open issues, submit pull requests, or engage in discussions to help make this project even better.
-
-Thank you for choosing Andromeda Cloud Server for your secure storage needs!
-
+For further customization options and detailed documentation, please refer to the  
+[Spring Boot documentation](https://docs.spring.io/spring-boot/docs/current/reference/html/application-properties.html).
 
