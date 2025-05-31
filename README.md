@@ -51,11 +51,11 @@ Legend:
 ***
 #### [Nebula Apps ](https://github.com/szymonderleta/andromeda/tree/main/apps/nebula)
 
-| Name                                                                                                | Type         | Version | Status          | Short Description                                                                                      |
-|-----------------------------------------------------------------------------------------------------|--------------|---------|-----------------|--------------------------------------------------------------------------------------------------------|
-| [Nebula Front App](https://github.com/szymonderleta/andromeda/tree/main/apps/nebula/nebula-web-app) | Frontend App | 3.0.0   | 🟩 **Released** | Web home page used for login and redirection to other services. Allows users to update settings.       |
-| [Nebula Rest API](https://github.com/szymonderleta/andromeda/tree/main/apps/nebula/nebula-rest-api) | Server App   | 3.0.0   | 🟩 **Released** | REST API intermediary between Andromeda Auth and other services. Handles reading and writing settings. |
-| [Nebula Database](https://github.com/szymonderleta/andromeda/tree/main/database/nebula)             | Schema       | 1.0.0   | 🟩 **Released** | Database schema used for production and testing.                                                       |
+| Name                                                                                                  | Type         | Version | Status          | Short Description                                                                                      |
+|-------------------------------------------------------------------------------------------------------|--------------|---------|-----------------|--------------------------------------------------------------------------------------------------------|
+| [Nebula Front App](https://github.com/szymonderleta/andromeda/tree/main/apps/nebula/nebula-front-app) | Frontend App | 3.0.0   | 🟩 **Released** | Web home page used for login and redirection to other services. Allows users to update settings.       |
+| [Nebula Rest API](https://github.com/szymonderleta/andromeda/tree/main/apps/nebula/nebula-rest-api)   | Server App   | 3.0.0   | 🟩 **Released** | REST API intermediary between Andromeda Auth and other services. Handles reading and writing settings. |
+| [Nebula Database](https://github.com/szymonderleta/andromeda/tree/main/database/nebula)               | Schema       | 1.0.0   | 🟩 **Released** | Database schema used for production and testing.                                                       |
 
 ***
 
