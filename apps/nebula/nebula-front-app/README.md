@@ -48,29 +48,29 @@ Here is a visual preview of key application interfaces:
 <table>
   <tr>
     <td align="center">
-      <img src="src/documentation/preview/registartion-form.png" alt="Registration Form" width="400" /><br/>
+      <img src="info/preview/registartion-form.png" alt="Registration Form" width="400" /><br/>
       <sub>Registration Form</sub>
     </td>
     <td align="center">
-      <img src="src/documentation/preview/login-page.png" alt="Login Form" width="400" /><br/>
+      <img src="info/preview/login-page.png" alt="Login Form" width="400" /><br/>
       <sub>Login Form</sub>
     </td>
     <td align="center">
-      <img src="src/documentation/preview/password-change.png" alt="Password change" width="400" /><br/>
+      <img src="info/preview/password-change.png" alt="Password change" width="400" /><br/>
       <sub>Main Page</sub>
     </td>
   </tr>
   <tr>
     <td align="center">
-      <img src="src/documentation/preview/dynamic-theme.png" alt="Dynamic Theme" width="400" /><br/>
+      <img src="info/preview/dynamic-theme.png" alt="Dynamic Theme" width="400" /><br/>
       <sub>Dynamic Theme</sub>
     </td>
     <td align="center">
-      <img src="src/documentation/preview/user-settings.png" alt="User Settings" width="400" /><br/>
+      <img src="info/preview/user-settings.png" alt="User Settings" width="400" /><br/>
       <sub>User Settings</sub>
     </td>
     <td align="center">
-      <img src="src/documentation/preview/resposible-page.png" alt="Responsive Page" width="400" /><br/>
+      <img src="info/preview/resposible-page.png" alt="Responsive Page" width="400" /><br/>
       <sub>Responsive Page</sub>
     </td>
   </tr>

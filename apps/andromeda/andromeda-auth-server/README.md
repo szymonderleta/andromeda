@@ -9,7 +9,7 @@
 
 📄 Changelog: [CHANGELOG.md](info/CHANGELOG.md)  
 🔗 Repository: [GitHub - Andromeda Authorization Server](https://github.com/szymonderleta/andromeda-authorization-server-public)  
-🛠️ Jenkins Pipeline: [JENKINS.MD](info/JENKINS.MD)
+🛠️ Jenkins Pipeline: [JENKINS.md](info/JENKINS.md)
 </div>
 
 ---
