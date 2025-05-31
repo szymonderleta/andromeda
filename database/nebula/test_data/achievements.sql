@@ -1,0 +1,5 @@
+INSERT INTO test_nebula.achievements (id, name, min_value, max_value, description, icon_url) VALUES (1, 'Total Progress', 0, 10000, 'Total achievements progress on nebula platform.', 'http://milkyway.local/nebula/res/icon/achievement/1.png');
+INSERT INTO test_nebula.achievements (id, name, min_value, max_value, description, icon_url) VALUES (2, 'Chess Progress', 0, 10000, 'Progress in chess platform', 'http://milkyway.local/nebula/res/icon/achievement/2.png');
+INSERT INTO test_nebula.achievements (id, name, min_value, max_value, description, icon_url) VALUES (3, 'Element Progress', 0, 10000, 'Progress in element platform', 'http://milkyway.local/nebula/res/icon/achievement/3.png');
+INSERT INTO test_nebula.achievements (id, name, min_value, max_value, description, icon_url) VALUES (4, 'Racer Progress', 0, 10000, 'Progress in racer platform', 'http://milkyway.local/nebula/res/icon/achievement/4.png');
+INSERT INTO test_nebula.achievements (id, name, min_value, max_value, description, icon_url) VALUES (5, 'Robak Progress', 0, 10000, 'Progress in robak platform', 'http://milkyway.local/nebula/res/icon/achievement/5.png');
