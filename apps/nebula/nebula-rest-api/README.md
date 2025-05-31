@@ -1,8 +1,16 @@
 # Nebula REST API
 
-Current Version: 3.0.0 Public Release  
-Repository: [GitHub - Nebula Rest Api](https://github.com/szymonderleta/nebula-rest-api-public)  
-Current Jenkins Configuration: [JENKINS.MD](https://github.com/szymonderleta/andromeda/blob/main/apps/nebula/nebula-rest-api/info/JENKINS.MD)
+<div align="left">
+
+![Author](https://img.shields.io/badge/Author-Szymon%20Derleta-white?style=for-the-badge)
+
+![Release](https://img.shields.io/badge/Release-Public%20Release-green?style=for-the-badge)  
+![Version](https://img.shields.io/badge/Version-3.1.0-green?style=for-the-badge)
+
+📄 Changelog: [CHANGELOG.md](info/CHANGELOG.md)  
+🔗 Repository: [GitHub - Nebula Rest Api](https://github.com/szymonderleta/nebula-rest-api-public)  
+🛠️ Jenkins Pipeline: [JENKINS.MD](info/JENKINS.MD)
+</div>
 
 ## Overview
 
@@ -10,16 +18,6 @@ Nebula REST API is the home application based on REST API, for the Andromeda pla
 point to various game applications currently under construction. This application serves as a gateway, allowing users to
 authenticate and navigate to the games and services offered by the platform. It also stores general user settings,
 allows users to upload profile images, and update their preferences.
-
-## Current Version
-
-**v 3.0.0 Public Release**
-- Added over 400 unit and integration tests.
-- Added an endpoint to refresh the accessToken (using the cookie with a valid refreshToken). Removed the old JWT token cookie system and replaced it with both accessToken and refreshToken, which are now stored as HttpOnly cookies. The accessToken is valid for 1 hour, while the refreshToken is valid for over 20 days.
-- Fixed small errors and refactored some parts of the code.
-
-**v 2.0.0 Beta Release**  
-This version is intended for testing purposes in a pre-production environment.
 
 ## Built With
 
