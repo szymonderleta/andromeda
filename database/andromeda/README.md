@@ -9,7 +9,6 @@
 
 </div>
 
-
 This repository contains the Andromeda project database schema and related materials.
 Structure
 

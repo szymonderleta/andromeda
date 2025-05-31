@@ -1,21 +1,39 @@
-# Andromeda
+# 🌌 Andromeda
 
-## About
-Andromeda is a microservices-based platform serving as a local single-player, browser-accessible game service. The system is built using a Raspberry Pi 5 computer (8GB RAM model) with an installed Debian 12 operating system. Therefore, it is based on the arm architecture. The applications were developed in several programming languages, including:
+## 🧾 About
 
-- **Java, using the Spring and Hibernate libraries or only JDBC driver**
-- **JavaScript, using the REACT library**
-- **Python, using the Django library**
+**Andromeda** is a microservices-based platform designed as a local, single-player, browser-accessible game service.  
+The system runs on a **Raspberry Pi 5** (8GB RAM model) with **Debian 12** installed and is built for the **ARM architecture**.
 
-### The system is composed of the following services-components:
+The platform includes services developed in multiple languages:
 
-- **MariaDB 10.11.6 - relational database system**
-- **Apache Tomcat 10 server for managing microservices written in Java (mainly version 21)**
-- **Apache HTTP Server providing a set of subpages for the end user**
+- **Java** — using Spring Boot, Hibernate, or raw JDBC
+- **JavaScript** — using the React library
+- **Python** — using the Django framework
 
-### Microservice ecosystem:
+---
 
-Each application and microservice has its dedicated directory containing source code, description of abilities, functions, database schema and means of communication.
+## ⚙️ System Components
+
+- **MariaDB 10.11.6**  
+  Relational database engine used for data persistence.
+
+- **Apache Tomcat 10**  
+  Hosts and manages Java-based microservices (mainly Java 21).
+
+- **Apache HTTP Server**  
+  Serves static content and provides access to subpages for the end user.
+
+---
+
+## 🧩 Microservice Ecosystem
+
+Each microservice is located in its own dedicated directory, which contains:
+
+- Source code
+- Functional overview and capabilities
+- Database schema and structure
+- Communication interfaces (e.g., REST endpoints, tokens, etc.)
 
 ### List of Applications and databases with current status:
 
@@ -73,5 +91,6 @@ Legend:
 ![andromeda-logic-2025-05-10.png](res/andromeda-logic-2025-05-10.png)  
 Image was last updated: 10.05.2025
 
-## Licence
-Andromeda is an open-source project based on the Apache 2.0 license
+## 📄 License
+
+**Andromeda** is an open-source project licensed under the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0).
