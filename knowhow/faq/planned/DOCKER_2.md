@@ -138,7 +138,7 @@ services:
 
 3. ⚙️ Automatic container start
 
-W docker-compose.yml zadeklarowaliśmy:
+In docker-compose.yml we declare:
 ```yaml
 restart: unless-stopped
 ```
@@ -347,4 +347,24 @@ systemctl --user status docker-containers.service
 - This service does not run as root, only under your user session
 
 - It assumes Docker is installed and the daemon (docker.service) starts on boot
+
+
+## Configuration - Jenkins
+
+Set proper permissions (especially for Jenkins):
+
+```bash
+sudo chown -R 1000:1000 /home/wolf/Dokumenty/docker-containers/jenkins
+```
+
+- After starting, access Jenkins at http://localhost:8080
+
+- Retrieve the initial admin password with: 
+```bash
+docker exec jenkins cat /var/jenkins_home/secrets/initialAdminPassword
+```
+
+
+## Configuration - Ollama
+
 
