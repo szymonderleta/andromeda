@@ -15,7 +15,7 @@ The platform includes services developed in multiple languages:
 
 ## ⚙️ System Components
 
-- **MariaDB 10.11.6**  
+- **MariaDB 10.11.11**  
   Relational database engine used for data persistence.
 
 - **Apache Tomcat 10**  
