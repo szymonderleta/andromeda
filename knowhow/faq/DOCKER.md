@@ -242,3 +242,54 @@ mariadb -u root -p < user_grants.sql
 ```
 
     Note: Replace root with your actual MySQL root user and enter the corresponding password when prompted.
+
+
+## Adding a Self-Signed Certificate to Tomcat Container's JVM Truststore
+Prerequisites
+
+- Running Docker container based on the tomcat:10.1.41-jdk21 image
+- HTTPS server (milkyway.local) uses a self-signed certificate
+- Access to the host machine with openssl installed and permissions to run docker exec and docker cp
+
+### Step 1: Retrieve the Server Certificate
+
+Run this command on the host machine (not inside the container):
+```bash
+openssl s_client -connect milkyway.local:8555 -showcerts </dev/null 2>/dev/null | openssl x509 -outform PEM > milkyway.crt
+```
+This will save the server’s certificate to a local file called milkyway.crt.
+
+### Step 2: Copy the Certificate into the Container
+```bash
+docker cp milkyway.crt tomcat:/tmp/milkyway.crt
+```
+
+### Step 3: Locate the JVM cacerts Truststore
+
+Verify where the JVM truststore is located by running:
+```bash
+docker exec -it tomcat find / -name cacerts 2>/dev/null
+```
+example output
+```bash
+/opt/java/openjdk/lib/security/cacerts
+```
+
+### Step 4: Import the Certificate into the JVM Truststore
+
+Import the certificate with the following command (note the important -cacerts flag):
+```bash
+docker exec -it tomcat keytool -importcert \
+-alias milkyway \
+-cacerts \
+-file /tmp/milkyway.crt \
+-storepass changeit \
+-noprompt
+```
+⚠️ Note: The default truststore password is changeit.
+The -cacerts option is required to access the default JVM truststore and avoid warnings.
+
+### Step 5: Restart the Container
+```bash
+docker restart tomcat
+```
