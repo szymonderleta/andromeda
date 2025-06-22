@@ -72,6 +72,7 @@ keytool -importkeystore -deststorepass changeit -destkeypass changeit -destkeyst
 ### 1. Download the Certificate
 
 Use the following command to extract the certificate from a running service (e.g., milkyway.local):
+
 ```bash
 echo | openssl s_client -connect milkyway.local:8555 -servername milkyway.local | \
 sed -ne '/-BEGIN CERTIFICATE-/,/-END CERTIFICATE-/p' > selfsigned.crt
@@ -80,16 +81,16 @@ sed -ne '/-BEGIN CERTIFICATE-/,/-END CERTIFICATE-/p' > selfsigned.crt
 ### 2. Create the truststore.jks File
 
 Use the keytool (included with JDK) to import the certificate into a Java truststore:
+
 ```bash
 keytool -importcert -trustcacerts -file selfsigned.crt -keystore truststore.jks -storepass changeit -alias milkyway
 ```
+
 Replace:
 
 - selfsigned.crt with your actual certificate filename.
 
 - truststore.jks is the newly created file that will contain the trusted certificate.
-
-
 
 ## Self-signed certificate example for Apache2 server
 
@@ -110,16 +111,17 @@ Configure Apache to use the certificate: In the VirtualHost file
 add following lines
 
 ```XML
+
 <VirtualHost *:443>
-    ServerName example.local
+        ServerName example.local
 
-    DocumentRoot /var/www/html
+        DocumentRoot /var/www/html
 
-    SSLEngine on
-    SSLCertificateFile /etc/ssl/certs/andromeda-frontend-selfsigned.crt
-    SSLCertificateKeyFile /etc/ssl/private/andromeda-frontend-selfsigned.key
+        SSLEngine on
+        SSLCertificateFile /etc/ssl/certs/andromeda-frontend-selfsigned.crt
+        SSLCertificateKeyFile /etc/ssl/private/andromeda-frontend-selfsigned.key
 
-    <Directory "/var/www/html">
+<Directory "/var/www/html">
         Options Indexes FollowSymLinks
         AllowOverride All
         Require all granted
@@ -129,9 +131,10 @@ add following lines
         # Redirect only root "/" requests to "/nebula/app"
         RewriteCond %{REQUEST_URI} ^/$
         RewriteRule ^ /nebula/app [R=301,L]
-    </Directory>
-</VirtualHost>
+        </Directory>
+        </VirtualHost>
 ```
+
 Then restart service:
 
 ```Bash
