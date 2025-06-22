@@ -114,7 +114,7 @@ Then restart service:
 sudo systemctl restart apache2
 ```
 
-## Importuj certyfikat wystawiony dla localhost
+## Importing certificate for localhost
 
 ### **1. Export the `example.local` certificate from the server**
 
