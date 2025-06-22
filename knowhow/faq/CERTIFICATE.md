@@ -67,6 +67,30 @@ keytool -importkeystore -deststorepass changeit -destkeypass changeit -destkeyst
 -srckeystore example.local.p12 -srcstoretype PKCS12 -srcstorepass changeit -alias example
 ```
 
+## 🔐 Adding a Self-Signed Certificate to Java Truststore
+
+### 1. Download the Certificate
+
+Use the following command to extract the certificate from a running service (e.g., milkyway.local):
+```bash
+echo | openssl s_client -connect milkyway.local:8555 -servername milkyway.local | \
+sed -ne '/-BEGIN CERTIFICATE-/,/-END CERTIFICATE-/p' > selfsigned.crt
+```
+
+### 2. Create the truststore.jks File
+
+Use the keytool (included with JDK) to import the certificate into a Java truststore:
+```bash
+keytool -importcert -trustcacerts -file selfsigned.crt -keystore truststore.jks -storepass changeit -alias milkyway
+```
+Replace:
+
+- selfsigned.crt with your actual certificate filename.
+
+- truststore.jks is the newly created file that will contain the trusted certificate.
+
+
+
 ## Self-signed certificate example for Apache2 server
 
 Generate a self-signed certificate:
