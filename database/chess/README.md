@@ -9,6 +9,7 @@
 
 </div>
 
+## Repository structure
 
 This repository contains the chess schema and related materials.
 Structure
@@ -22,6 +23,16 @@ Structure
     archive/ – Stores legacy and archived materials for reference.
 
     test_data/ – Stores sql files with insert queries used in test_nebula database.
+
+## Database configuration:
+
+1. Scheduling a task in MariaDB (using the Event Scheduler)
+
+```sql
+SET GLOBAL event_scheduler = ON;
+```
+
+## Preview
 
 Current Model Preview
 

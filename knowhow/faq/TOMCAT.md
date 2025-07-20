@@ -67,6 +67,24 @@ Add the necessary user roles and credentials. Example:
 It may also be necessary to change the Java version by editing the file `/etc/default/tomcat10` and adding the
 `JAVA_HOME` variable.
 
+**Adding environment for Tomcat apps:**
+
+To add environment, you need to edit the setenv.sh file, for example:
+
+```bash
+ sudo nano /usr/share/tomcat10/bin/setenv.sh
+```
+
+ and example file body:
+
+```bash
+   export MILKYWAY_TOMCAT_URL=https://localhost:8555
+   export SPRING_CLOUD_CONFIG_USERNAME=administrator
+   export SPRING_CLOUD_CONFIG_PASSWORD=<YourSecretAdministratorPass>
+```
+
+then press crtl+X and save a file.
+
 **Update Java version if required:**
 
 Open the file `/etc/default/tomcat10`:
