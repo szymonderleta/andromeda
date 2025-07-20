@@ -26,7 +26,7 @@ Structure
 
 ## Database configuration:
 
-Scheduling a task in MariaDB (using the Event Scheduler)
+1. Scheduling a task in MariaDB (using the Event Scheduler)
 
 ```sql
 SET GLOBAL event_scheduler = ON;
