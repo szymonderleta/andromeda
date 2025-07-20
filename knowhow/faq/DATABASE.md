@@ -145,3 +145,26 @@ Then import the data:
    mysql -u root -p test_andromeda < andromeda.sql
 ```
 
+## Helpful MariaDB Commands
+
+Checking Event Scheduler Status
+```sql
+SHOW VARIABLES LIKE 'event_scheduler';
+```
+
+Listing Defined Events
+```sql
+SHOW EVENTS;
+```
+
+Enabling/Disabling Specific Events
+```sql
+ALTER EVENT achievement_progress_update_event ENABLE;
+ALTER EVENT achievement_progress_update_event DISABLE;
+```
+
+Viewing Triggers
+```sql
+SHOW TRIGGERS;
+```
+
