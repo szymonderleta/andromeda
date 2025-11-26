@@ -4,7 +4,10 @@
 This folder contains all Chess family applications related to the [Andromeda Project]. Each application serves a specific purpose and works together to deliver the desired functionality of the project.
 
 ## Folder Structure
-Work in progress
+
+- **`/chess-rest-api/`**  
+  Java 21 backend application built with Spring Boot and Hibernate. It provides a REST API for managing data related to chess apps family.
+
 
 ## Technologies Used
 - **Backend applications**: [Java (Spring, Hibernate ORM)]
@@ -13,6 +16,8 @@ Work in progress
 
 
 ## API Endpoints Overview
+
+<img src="https://img.shields.io/badge/!-%20Needs%20review-orange" alt="Needs review" /> **These endpoints should be reviewed and verified against Chess Rest Api v3.0.0.**
 
 The following table provides a complete list of available API endpoints for the `FrontApp` and `GameApp` modules.  
 Each row describes the HTTP method, path, associated controller, and flags indicating whether the endpoint supports pagination, sorting, returns a collection, or is publicly accessible.
@@ -76,13 +81,5 @@ Each row describes the HTTP method, path, associated controller, and flags indic
 | GameApp  | Game – Info                   | /game/info                                | *GameController*        | ![GET](https://img.shields.io/badge/GET-blue)       | ![false](https://img.shields.io/badge/false-lightgrey) | ![false](https://img.shields.io/badge/false-lightgrey) | ![false](https://img.shields.io/badge/false-lightgrey) | ![true](https://img.shields.io/badge/true-brightgreen) |
 
 ---
-
-## Game Save lifecycle diagram
-
-![game-save-lifecycle.drawio.png](info/game-save-lifecycle.drawio.png)
-
-
-
-
 ## License
 [Apache 2.0]
