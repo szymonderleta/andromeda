@@ -59,12 +59,12 @@ Legend:
 ***
 #### [Chess Apps](https://github.com/szymonderleta/andromeda/tree/main/apps/chess)
 
-| 🧩 Name                                                                               | 🧷 Type      | 🛠️ Version | 📦 Status   | 📝 Short Description                                         |
-|---------------------------------------------------------------------------------------|--------------|-------------|-------------|--------------------------------------------------------------|
-| [Chess Web App]                                                                       | Frontend App | 0.5.0       | 🟦 **Beta** | Chess webpage providing a user interface                     |
-| [Chess Game App]                                                                      | Game App     | 0.5.0       | 🟦 **Beta** | Chess game application allowing users to play chess          |
-| [Chess Rest API]                                                                      | Server App   | 1.4.0       | 🟦 **Beta** | REST API for managing chess data and distributing it to apps |
-| [Chess Database](https://github.com/szymonderleta/andromeda/tree/main/database/chess) | Schema       | 1.0.0       | 🟦 **Beta** | Database schema for production and testing                   |
+| 🧩 Name                                                                                          | 🧷 Type      | 🛠️ Version | 📦 Status       | 📝 Short Description                                         |
+|--------------------------------------------------------------------------------------------------|--------------|-------------|-----------------|--------------------------------------------------------------|
+| [Chess Web App]                                                                                  | Frontend App | 0.5.0       | 🟦 **Beta**     | Chess webpage providing a user interface                     |
+| [Chess Game App]                                                                                 | Game App     | 0.5.0       | 🟦 **Beta**     | Chess game application allowing users to play chess          |
+| [Chess Rest API](https://github.com/szymonderleta/andromeda/tree/main/apps/chess/chess-rest-api) | Server App   | 3.0.0       | 🟩 **Released** | REST API for managing chess data and distributing it to apps |
+| [Chess Database](https://github.com/szymonderleta/andromeda/tree/main/database/chess)            | Schema       | 2.0.0       | 🟩 **Released** | Database schema for production and testing                   |
 
 ***
 #### [Nebula Apps ](https://github.com/szymonderleta/andromeda/tree/main/apps/nebula)
