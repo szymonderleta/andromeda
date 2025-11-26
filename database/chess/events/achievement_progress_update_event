@@ -1,0 +1,8 @@
+create definer = chess@`%` event achievement_progress_update_event on schedule
+    every '1' HOUR
+        starts '2025-07-20 09:27:42'
+    enable
+    do
+    BEGIN
+        CALL update_achievement_progress();
+    END;
