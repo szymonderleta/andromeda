@@ -7,6 +7,12 @@
 ![Release](https://img.shields.io/badge/Release-Public%20Release-green?style=for-the-badge)  
 ![Version](https://img.shields.io/badge/Version-3.0.0-green?style=for-the-badge)
 
+#### Current Test Coverage (as of 2025-11-25 19:37):
+
+![Classes](https://img.shields.io/badge/Classes-99.8%25-brightgreen?style=for-the-badge&logo=java)
+![Methods](https://img.shields.io/badge/Methods-99.6%25-brightgreen?style=for-the-badge&logo=java)
+![Lines](https://img.shields.io/badge/Lines-99.6%25-brightgreen?style=for-the-badge&logo=java)
+
 📄 Changelog: [CHANGELOG.md](info/CHANGELOG.md)  
 🔗 Repository: [GitHub - Chess Rest Api](https://github.com/szymonderleta/chess-rest-api-public)  
 🛠️ Jenkins Pipeline: [JENKINS.md](info/JENKINS.md)  
@@ -40,7 +46,7 @@ Chess REST API provides backend services for managing chess-related data and wor
   - MariaDB (JDBC driver)
 
 - Testing
-  - spring-boot-starter-test, spring-security-test
+  - spring-boot-starter-test, spring-security-test, junit5, mockito
 
 - Tooling / CI
   - Jenkins (pipeline)
@@ -127,24 +133,6 @@ Prometheus metric are available under:
 
 - [Actuator](http://localhost:8555/actuator)
 - [Prometheus](http://localhost:8555/actuator/prometheus)
-
-## Test Coverage Report
-
-If generated locally (e.g., with JaCoCo), open the HTML report:
-
-- [HTML Coverage Report](htmlReport/index.html)
-
-To generate a fresh report, run your test/coverage workflow (for example via IDE, Maven, or CI) and refresh the report path above.
-
-### Current Test Coverage (as of 2025-11-25 19:37)
-
-Overall coverage across all classes:
-
-- Classes: 99.8% (460/461)
-- Methods: 99.6% (1331/1336)
-- Lines: 99.6% (6122/6146)
-
-For the complete, per-class and per-branch details, see the HTML report linked above.
 
 ## License
 
